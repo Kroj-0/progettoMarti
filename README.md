@@ -3,19 +3,37 @@ Progetto Basi Dati Marti
 
 # DONE:
 - model definitivi
-- rework controller parte 1: Home/Admin e Prodotti/Vista Prodotti
+- rework controller e jsp parte 1: Home/Admin e Prodotti/Vista Prodotti     <strong>funzionante</strong>
+- rework controller e jsp parte 2: registrazione clienti     <strong>funzionante</strong>
+- rework cart REST services completato     <strong>funzionante</strong>
+- DAO e Servizi implementati totalmente, tranne quelli possibilmente necessari per checkout e gestione ordini da parte degli admin
+- model, dao, services, controller per gli ordini implementati      <strong>funzionante</strong>
 
 # DA RIVEDERE?
-- modello relazionale tra product-->cartItem-->cart-->order, possibile semplificazione e miglioramento della logica di buisness
+- modello relazionale tra product-->cartItem-->cart-->order, possibile semplificazione e miglioramento della logica
+- forse è meglio non mettere le password in chiaro nel db
 
 # TO DO:
-- registrazione clienti
-- cart controller
-- creazione ordine cliente
+- <s>registrazione clienti</s>
+- <s>cart controller</s>
+- manca completamente la gestione delle quantità prodotti, al momento non sono in grado di controllare che non vengano venduti più prodotti di quelli disponibili, ne di cambiare manualmente le quantità dei prodotti nel carrello
+- <s>creazione ordine cliente</s>
 - simulazione checkout
 - gestione ordini e clienti da parte dell'admin
+- capacità di navigare il catalogo per marca, tipo, ricerca libera (uso di un plugin third party?)
 - ...(vedi richieste originali mancanti)
 - rework della grafica/testi
+
+# MIGLIORAMENTI NECESSARI/KNOWN ISSUES:
+- sviluppare un modo per cambiare la quantita degli oggetti nel carrello, non solo rimuoverli in blocco, con un refresh automatico del    prezzo totale basato sulla quantita aggiornata a mano dall'utente
+-cambiando l'url nella visione del carrello, risulta possibile accedere ai carrelli di altri utenti, poichè il formato dell'url risulta
+                                          
+                                          http://localhost:8080/customer/cart/1
+                                          
+ dove l'int rappresenta il cartId univoco per il cliente
+ - se modifico un prodotto già esistente come admin, la modifica dell'immagine non funziona sempre (il perchè è un mistero)
+ -se come admin metto un prodotto "INACTIVE", lo posso comunque vedere lo stesso nella lista prodotti. Ora questo mi può andare bene per la visione dell'admin (anche se deve essere segnalato in qualche modo), ma l'utente non deve poterli vedere. Tantomeno ordinarli, perchè adesso se li vede li può anche ordinare. All'infinito. (lol)
+ - visione del singolo prodotto e inserimento nel carrello, bruttino ma secondario
 
 # Richieste originali:
 
