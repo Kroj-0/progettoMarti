@@ -18,6 +18,8 @@ public class Customer implements Serializable {
 
     @NotEmpty(message="Customer name can't be empty")
     private String customerName;
+    @NotEmpty(message="Customer Surname can't be empty")
+    private String customerSurname;
     @NotEmpty(message="Customer email can't be empty")
     private String customerEmail;
     private String customerPhone;
@@ -55,6 +57,14 @@ public class Customer implements Serializable {
 
     public void setCustomerName(String customerName) {
         this.customerName = customerName;
+    }
+
+    public String getCustomerSurname() {
+        return customerSurname;
+    }
+
+    public void setCustomerSurname(String customerSurname) {
+        this.customerSurname = customerSurname;
     }
 
     public String getCustomerEmail() {

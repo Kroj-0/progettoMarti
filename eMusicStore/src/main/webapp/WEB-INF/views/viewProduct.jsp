@@ -42,7 +42,7 @@
                         <a href="<c:url value="${url}"/>" class="btn btn-default">Back</a>
                         <a href="#" class="btn btn-warning btn-large" ng-click="addToCart('${product.productId}')">
                             <span class="glyphicon glyphicon-shopping-cart"></span>Order Now!</a>
-                        <a href="<c:url value="/cart"/>" class="btn btn-default"><span class="glyphicon glyphicon-hand-right"></span>View Cart</a>
+                        <a href="<c:url value="/rest/cart/"/>" class="btn btn-default"><span class="glyphicon glyphicon-hand-right"></span>View Cart</a>
                     </p>
                 </div>
             </div>

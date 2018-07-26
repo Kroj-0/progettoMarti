@@ -7,52 +7,72 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d3ca179b-c479-4f5b-a7c4-9d6cb4abf3bd" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/emusicstore_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/emusicstore_war_exploded.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_3_1_4_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_3_1_4_RELEASE.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_3_1_4_RELEASE.xml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/applicationContext.xml" afterPath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/applicationContext.xml" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/classes/com/emusicstore/controller/AdminController.class" afterPath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/classes/com/emusicstore/controller/AdminController.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/classes/com/emusicstore/controller/CartController.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/classes/com/emusicstore/controller/CartItemController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/classes/com/emusicstore/controller/AdminProduct.class" afterPath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/classes/com/emusicstore/controller/AdminProduct.class" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/classes/com/emusicstore/controller/HomeController.class" afterPath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/classes/com/emusicstore/controller/HomeController.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/classes/com/emusicstore/controller/LoginController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/classes/com/emusicstore/controller/ProductController.class" afterPath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/classes/com/emusicstore/controller/ProductController.class" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/classes/com/emusicstore/dao/CartDao.class" afterPath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/classes/com/emusicstore/dao/CartDao.class" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/classes/com/emusicstore/dao/ProductDao.class" afterPath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/classes/com/emusicstore/dao/ProductDao.class" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/classes/com/emusicstore/dao/impl/CartDaoImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/classes/com/emusicstore/dao/impl/CartDaoImpl.class" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/classes/com/emusicstore/dao/impl/ProductDaoImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/classes/com/emusicstore/dao/impl/ProductDaoImpl.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/classes/com/emusicstore/model/Authorities.class" afterPath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/classes/com/emusicstore/model/Authorities.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/classes/com/emusicstore/model/BillingAddress.class" afterPath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/classes/com/emusicstore/model/BillingAddress.class" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/classes/com/emusicstore/model/Cart.class" afterPath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/classes/com/emusicstore/model/Cart.class" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/classes/com/emusicstore/model/CartItem.class" afterPath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/classes/com/emusicstore/model/CartItem.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/classes/com/emusicstore/model/Customer.class" afterPath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/classes/com/emusicstore/model/Customer.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/classes/com/emusicstore/model/CustomerOrder.class" afterPath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/classes/com/emusicstore/model/CustomerOrder.class" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/classes/com/emusicstore/model/Product.class" afterPath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/classes/com/emusicstore/model/Product.class" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/resources/images/1.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/views/addProduct.jsp" afterPath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/views/addProduct.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/views/editProduct.jsp" afterPath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/views/editProduct.jsp" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/classes/com/emusicstore/model/ShippingAddress.class" afterPath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/classes/com/emusicstore/model/ShippingAddress.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/classes/com/emusicstore/model/Users.class" afterPath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/classes/com/emusicstore/model/Users.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/classes/com/emusicstore/service/ProductService.class" afterPath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/classes/com/emusicstore/service/ProductService.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/classes/com/emusicstore/service/impl/ProductServiceImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/classes/com/emusicstore/service/impl/ProductServiceImpl.class" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/dispatcher-servlet.xml" afterPath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/dispatcher-servlet.xml" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/resources/js/cartcontroller.js" afterPath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/resources/js/cartcontroller.js" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/views/cart.jsp" afterPath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/views/cart.jsp" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/views/productInventory.jsp" afterPath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/views/productInventory.jsp" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/views/productList.jsp" afterPath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/views/productList.jsp" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/views/template/header.jsp" afterPath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/views/template/header.jsp" />
-      <change beforePath="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/controller/AdminController.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/controller/CartController.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/controller/CartItemController.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/controller/HomeController.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/controller/LoginController.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/dao/impl/ProductDaoImpl.java" afterPath="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/dao/impl/ProductDaoImpl.java" />
-      <change beforePath="$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/applicationContext.xml" afterPath="$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/applicationContext.xml" />
-      <change beforePath="$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/views/addProduct.jsp" afterPath="$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/views/addProduct.jsp" />
-      <change beforePath="$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/views/editProduct.jsp" afterPath="$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/views/editProduct.jsp" />
-      <change beforePath="$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/views/productInventory.jsp" afterPath="$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/views/productInventory.jsp" />
-      <change beforePath="$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/views/productList.jsp" afterPath="$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/views/productList.jsp" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/views/viewProduct.jsp" afterPath="$PROJECT_DIR$/out/artifacts/emusicstore_war_exploded/WEB-INF/views/viewProduct.jsp" />
+      <change beforePath="$PROJECT_DIR$/../eMusicStore/emusicstore.iml" afterPath="$PROJECT_DIR$/../eMusicStore/emusicstore.iml" />
+      <change beforePath="$PROJECT_DIR$/../eMusicStore/pom.xml" afterPath="$PROJECT_DIR$/../eMusicStore/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/dao/CartDao.java" afterPath="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/dao/CartDao.java" />
+      <change beforePath="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/dao/impl/CartDaoImpl.java" afterPath="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/dao/impl/CartDaoImpl.java" />
+      <change beforePath="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/model/Authorities.java" afterPath="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/model/Authorities.java" />
+      <change beforePath="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/model/Customer.java" afterPath="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/model/Customer.java" />
+      <change beforePath="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/model/Users.java" afterPath="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/model/Users.java" />
+      <change beforePath="$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterPath="$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/dispatcher-servlet.xml" />
+      <change beforePath="$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/resources/js/cartcontroller.js" afterPath="$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/resources/js/cartcontroller.js" />
+      <change beforePath="$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/views/cart.jsp" afterPath="$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/views/cart.jsp" />
       <change beforePath="$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/views/template/header.jsp" afterPath="$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/views/template/header.jsp" />
       <change beforePath="$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/views/viewProduct.jsp" afterPath="$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/views/viewProduct.jsp" />
       <change beforePath="$PROJECT_DIR$/../eMusicStore/target/classes/com/emusicstore/controller/AdminController.class" afterPath="$PROJECT_DIR$/../eMusicStore/target/classes/com/emusicstore/controller/AdminController.class" />
-      <change beforePath="$PROJECT_DIR$/../eMusicStore/target/classes/com/emusicstore/controller/CartController.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../eMusicStore/target/classes/com/emusicstore/controller/CartItemController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../eMusicStore/target/classes/com/emusicstore/controller/AdminProduct.class" afterPath="$PROJECT_DIR$/../eMusicStore/target/classes/com/emusicstore/controller/AdminProduct.class" />
       <change beforePath="$PROJECT_DIR$/../eMusicStore/target/classes/com/emusicstore/controller/HomeController.class" afterPath="$PROJECT_DIR$/../eMusicStore/target/classes/com/emusicstore/controller/HomeController.class" />
-      <change beforePath="$PROJECT_DIR$/../eMusicStore/target/classes/com/emusicstore/controller/LoginController.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../eMusicStore/target/classes/com/emusicstore/controller/ProductController.class" afterPath="$PROJECT_DIR$/../eMusicStore/target/classes/com/emusicstore/controller/ProductController.class" />
       <change beforePath="$PROJECT_DIR$/../eMusicStore/target/classes/com/emusicstore/dao/CartDao.class" afterPath="$PROJECT_DIR$/../eMusicStore/target/classes/com/emusicstore/dao/CartDao.class" />
       <change beforePath="$PROJECT_DIR$/../eMusicStore/target/classes/com/emusicstore/dao/ProductDao.class" afterPath="$PROJECT_DIR$/../eMusicStore/target/classes/com/emusicstore/dao/ProductDao.class" />
       <change beforePath="$PROJECT_DIR$/../eMusicStore/target/classes/com/emusicstore/dao/impl/CartDaoImpl.class" afterPath="$PROJECT_DIR$/../eMusicStore/target/classes/com/emusicstore/dao/impl/CartDaoImpl.class" />
       <change beforePath="$PROJECT_DIR$/../eMusicStore/target/classes/com/emusicstore/dao/impl/ProductDaoImpl.class" afterPath="$PROJECT_DIR$/../eMusicStore/target/classes/com/emusicstore/dao/impl/ProductDaoImpl.class" />
+      <change beforePath="$PROJECT_DIR$/../eMusicStore/target/classes/com/emusicstore/model/Authorities.class" afterPath="$PROJECT_DIR$/../eMusicStore/target/classes/com/emusicstore/model/Authorities.class" />
+      <change beforePath="$PROJECT_DIR$/../eMusicStore/target/classes/com/emusicstore/model/BillingAddress.class" afterPath="$PROJECT_DIR$/../eMusicStore/target/classes/com/emusicstore/model/BillingAddress.class" />
       <change beforePath="$PROJECT_DIR$/../eMusicStore/target/classes/com/emusicstore/model/Cart.class" afterPath="$PROJECT_DIR$/../eMusicStore/target/classes/com/emusicstore/model/Cart.class" />
       <change beforePath="$PROJECT_DIR$/../eMusicStore/target/classes/com/emusicstore/model/CartItem.class" afterPath="$PROJECT_DIR$/../eMusicStore/target/classes/com/emusicstore/model/CartItem.class" />
+      <change beforePath="$PROJECT_DIR$/../eMusicStore/target/classes/com/emusicstore/model/Customer.class" afterPath="$PROJECT_DIR$/../eMusicStore/target/classes/com/emusicstore/model/Customer.class" />
+      <change beforePath="$PROJECT_DIR$/../eMusicStore/target/classes/com/emusicstore/model/CustomerOrder.class" afterPath="$PROJECT_DIR$/../eMusicStore/target/classes/com/emusicstore/model/CustomerOrder.class" />
       <change beforePath="$PROJECT_DIR$/../eMusicStore/target/classes/com/emusicstore/model/Product.class" afterPath="$PROJECT_DIR$/../eMusicStore/target/classes/com/emusicstore/model/Product.class" />
+      <change beforePath="$PROJECT_DIR$/../eMusicStore/target/classes/com/emusicstore/model/ShippingAddress.class" afterPath="$PROJECT_DIR$/../eMusicStore/target/classes/com/emusicstore/model/ShippingAddress.class" />
+      <change beforePath="$PROJECT_DIR$/../eMusicStore/target/classes/com/emusicstore/model/Users.class" afterPath="$PROJECT_DIR$/../eMusicStore/target/classes/com/emusicstore/model/Users.class" />
+      <change beforePath="$PROJECT_DIR$/../eMusicStore/target/classes/com/emusicstore/service/ProductService.class" afterPath="$PROJECT_DIR$/../eMusicStore/target/classes/com/emusicstore/service/ProductService.class" />
+      <change beforePath="$PROJECT_DIR$/../eMusicStore/target/classes/com/emusicstore/service/impl/ProductServiceImpl.class" afterPath="$PROJECT_DIR$/../eMusicStore/target/classes/com/emusicstore/service/impl/ProductServiceImpl.class" />
+      <change beforePath="$PROJECT_DIR$/../eMusicStore/target/emusicstore-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/../eMusicStore/target/emusicstore-1.0-SNAPSHOT.jar" />
+      <change beforePath="$PROJECT_DIR$/../eMusicStore/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/../eMusicStore/target/maven-archiver/pom.properties" />
+      <change beforePath="$PROJECT_DIR$/../eMusicStore/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/../eMusicStore/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
+      <change beforePath="$PROJECT_DIR$/../eMusicStore/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/../eMusicStore/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
     </list>
     <ignored path="$PROJECT_DIR$/../eMusicStore/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -76,74 +96,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="AdminProduct.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/controller/AdminProduct.java">
+      <file leaf-file-name="OrderController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/controller/OrderController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="96" column="24" lean-forward="false" selection-start-line="96" selection-start-column="24" selection-end-line="96" selection-end-column="24" />
+            <state relative-caret-position="294">
+              <caret line="19" column="54" lean-forward="false" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="editProduct.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/views/editProduct.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1071">
-              <caret line="12" column="75" lean-forward="true" selection-start-line="12" selection-start-column="75" selection-end-line="12" selection-end-column="75" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Product.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/model/Product.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProductController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/controller/ProductController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="33" column="29" lean-forward="false" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="productList.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/views/productList.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="32" column="60" lean-forward="false" selection-start-line="32" selection-start-column="60" selection-end-line="32" selection-end-column="60" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="productInventory.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/views/productInventory.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="32" column="60" lean-forward="false" selection-start-line="32" selection-start-column="60" selection-end-line="32" selection-end-column="60" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="viewProduct.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/views/viewProduct.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="35" column="65" lean-forward="false" selection-start-line="35" selection-start-column="65" selection-end-line="35" selection-end-column="65" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -153,8 +113,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="JavaScript File" />
+        <option value="Jsp File" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -171,27 +131,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/resources/css/main.css" />
-        <option value="$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/views/home.jsp" />
-        <option value="$PROJECT_DIR$/../eMusicStore/pom.xml" />
-        <option value="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/dao/CartDao.java" />
-        <option value="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/dao/impl/CartDaoImpl.java" />
-        <option value="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/controller/CartItemController.java" />
-        <option value="$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/views/cart.jsp" />
-        <option value="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/controller/CartController.java" />
-        <option value="$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/resources/js/cartcontroller.js" />
-        <option value="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/model/Users.java" />
-        <option value="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/model/Authorities.java" />
-        <option value="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/model/Product.java" />
         <option value="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/model/CartItem.java" />
         <option value="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/model/Cart.java" />
-        <option value="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/model/Customer.java" />
         <option value="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/model/CustomerOrder.java" />
         <option value="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/model/BillingAddress.java" />
         <option value="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/model/ShippingAddress.java" />
-        <option value="$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/views/template/header.jsp" />
         <option value="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/controller/admin/AdminController.java" />
-        <option value="$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/applicationContext.xml" />
         <option value="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/controller/admin/AdminHome.java" />
         <option value="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/dao/ProductDao.java" />
         <option value="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/dao/impl/ProductDaoImpl.java" />
@@ -205,7 +150,38 @@
         <option value="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/controller/ProductController.java" />
         <option value="$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/views/productList.jsp" />
         <option value="$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/views/productInventory.jsp" />
+        <option value="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/model/Customer.java" />
+        <option value="$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/views/registerCustomer.jsp" />
+        <option value="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/model/Authorities.java" />
+        <option value="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/controller/RegisterController.java" />
+        <option value="$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/views/registerCustomerSuccess.jsp" />
+        <option value="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/model/Users.java" />
+        <option value="$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/applicationContext.xml" />
+        <option value="$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/views/template/header.jsp" />
+        <option value="$PROJECT_DIR$/../eMusicStore/pom.xml" />
+        <option value="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/service/CustomerService.java" />
+        <option value="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/dao/CustomerDao.java" />
+        <option value="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/dao/impl/CustomerDaoImpl.java" />
+        <option value="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/service/impl/CustomerServiceImpl.java" />
+        <option value="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/service/CartService.java" />
+        <option value="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/service/impl/CartServiceImpl.java" />
+        <option value="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/dao/CartDao.java" />
+        <option value="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/service/CartItemService.java" />
+        <option value="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/dao/CartItemDao.java" />
+        <option value="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/dao/impl/CartDaoImpl.java" />
+        <option value="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/dao/impl/CartItemDaoImpl.java" />
+        <option value="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/service/impl/CartItemServiceImpl.java" />
+        <option value="$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/resources/js/cartcontroller.js" />
+        <option value="$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/dispatcher-servlet.xml" />
+        <option value="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/controller/CartController.java" />
+        <option value="$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/views/cart.jsp" />
         <option value="$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/views/viewProduct.jsp" />
+        <option value="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/controller/CartREST.java" />
+        <option value="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/service/CustomerOrderService.java" />
+        <option value="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/dao/CustomerOrderDao.java" />
+        <option value="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/controller/OrderController.java" />
+        <option value="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/dao/impl/CustomerOrderDaoImpl.java" />
+        <option value="$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/service/impl/CustomerOrderServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -241,11 +217,16 @@
           <item name="emusicstore" type="9519ce18:MavenProjectsStructure$ProjectNode" />
           <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
         </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="emusicstore" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
       </expand>
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-9" />
     <option name="y" value="-9" />
     <option name="width" value="976" />
@@ -338,15 +319,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="emusicstore" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="again" type="b2602c69:ProjectViewProjectNode" />
-              <item name="eMusicStore" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="emusicstore" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -412,16 +384,6 @@
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="again" type="b2602c69:ProjectViewProjectNode" />
-              <item name="eMusicStore" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="template" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -435,7 +397,7 @@
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="last_opened_file_path" value="C:/Program Files/Git/bin/git.exe" />
@@ -627,12 +589,12 @@
       <workItem from="1532366362303" duration="936000" />
       <workItem from="1532599045737" duration="1878000" />
       <workItem from="1532600997263" duration="461000" />
-      <workItem from="1532601553346" duration="5965000" />
+      <workItem from="1532601553346" duration="20256000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34672000" />
+    <option name="totallyTimeSpent" value="48963000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -644,8 +606,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
-    <editor active="true" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <layout>
       <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -728,367 +689,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/controller/CartController.java" />
-    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/controller/admin/AdminHome.java" />
-    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/views/admin.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="34" column="0" lean-forward="true" selection-start-line="33" selection-start-column="6" selection-end-line="34" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../eMusicStore/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2352">
-          <caret line="112" column="20" lean-forward="true" selection-start-line="112" selection-start-column="20" selection-end-line="112" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/model/CartItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="31" lean-forward="true" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#638#639#0" expanded="false" />
-            <element signature="e#671#672#0" expanded="false" />
-            <element signature="e#720#721#0" expanded="false" />
-            <element signature="e#764#765#0" expanded="false" />
-            <element signature="e#793#794#0" expanded="false" />
-            <element signature="e#820#821#0" expanded="false" />
-            <element signature="e#858#859#0" expanded="false" />
-            <element signature="e#890#891#0" expanded="false" />
-            <element signature="e#925#926#0" expanded="false" />
-            <element signature="e#955#956#0" expanded="false" />
-            <element signature="e#1002#1003#0" expanded="false" />
-            <element signature="e#1040#1041#0" expanded="false" />
-            <element signature="e#1072#1073#0" expanded="false" />
-            <element signature="e#1103#1104#0" expanded="false" />
-            <element signature="e#1148#1149#0" expanded="false" />
-            <element signature="e#1188#1189#0" expanded="false" />
-            <element signature="e#1220#1221#0" expanded="false" />
-            <element signature="e#1248#1249#0" expanded="false" />
-            <element signature="e#1290#1291#0" expanded="false" />
-            <element signature="e#1324#1325#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/model/Cart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1071">
-          <caret line="64" column="42" lean-forward="false" selection-start-line="64" selection-start-column="42" selection-end-line="64" selection-end-column="42" />
-          <folding>
-            <element signature="e#725#726#0" expanded="false" />
-            <element signature="e#754#755#0" expanded="false" />
-            <element signature="e#795#796#0" expanded="false" />
-            <element signature="e#831#832#0" expanded="false" />
-            <element signature="e#875#876#0" expanded="false" />
-            <element signature="e#907#908#0" expanded="false" />
-            <element signature="e#965#966#0" expanded="false" />
-            <element signature="e#1007#1008#0" expanded="false" />
-            <element signature="e#1044#1045#0" expanded="false" />
-            <element signature="e#1075#1076#0" expanded="false" />
-            <element signature="e#1125#1126#0" expanded="false" />
-            <element signature="e#1165#1166#0" expanded="false" />
-            <element signature="e#1197#1198#0" expanded="false" />
-            <element signature="e#1225#1226#0" expanded="false" />
-            <element signature="e#1267#1268#0" expanded="false" />
-            <element signature="e#1301#1302#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/dao/CartDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="5" column="11" lean-forward="false" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/dao/impl/CartDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="38" column="128" lean-forward="false" selection-start-line="38" selection-start-column="128" selection-end-line="38" selection-end-column="128" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/views/cart.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1029">
-          <caret line="49" column="74" lean-forward="false" selection-start-line="49" selection-start-column="74" selection-end-line="49" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/controller/CartItemController.java" />
-    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/controller/CartController.java" />
-    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/resources/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/controller/LoginController.java" />
-    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/views/home.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="21" column="42" lean-forward="false" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/views/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-352">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/views/admin.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="34" column="0" lean-forward="false" selection-start-line="33" selection-start-column="6" selection-end-line="34" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/dao/CartDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/dao/impl/CartDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="11" column="14" lean-forward="false" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/controller/CartItemController.java" />
-    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/views/cart.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/resources/js/cartcontroller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="23" column="36" lean-forward="false" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../eMusicStore/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" column="21" lean-forward="true" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/model/Authorities.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="28" lean-forward="false" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-          <folding>
-            <element signature="e#327#328#0" expanded="false" />
-            <element signature="e#368#369#0" expanded="false" />
-            <element signature="e#404#405#0" expanded="false" />
-            <element signature="e#439#440#0" expanded="false" />
-            <element signature="e#470#471#0" expanded="false" />
-            <element signature="e#518#519#0" expanded="false" />
-            <element signature="e#558#559#0" expanded="false" />
-            <element signature="e#593#594#0" expanded="false" />
-            <element signature="e#624#625#0" expanded="false" />
-            <element signature="e#672#673#0" expanded="false" />
-            <element signature="e#712#713#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/model/Users.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="18" lean-forward="false" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-          <folding>
-            <element signature="e#343#344#0" expanded="false" />
-            <element signature="e#372#373#0" expanded="false" />
-            <element signature="e#413#414#0" expanded="false" />
-            <element signature="e#449#450#0" expanded="false" />
-            <element signature="e#484#485#0" expanded="false" />
-            <element signature="e#515#516#0" expanded="false" />
-            <element signature="e#563#564#0" expanded="false" />
-            <element signature="e#603#604#0" expanded="false" />
-            <element signature="e#638#639#0" expanded="false" />
-            <element signature="e#669#670#0" expanded="false" />
-            <element signature="e#717#718#0" expanded="false" />
-            <element signature="e#757#758#0" expanded="false" />
-            <element signature="e#791#792#0" expanded="false" />
-            <element signature="e#821#822#0" expanded="false" />
-            <element signature="e#868#869#0" expanded="false" />
-            <element signature="e#906#907#0" expanded="false" />
-            <element signature="e#940#941#0" expanded="false" />
-            <element signature="e#973#974#0" expanded="false" />
-            <element signature="e#1022#1023#0" expanded="false" />
-            <element signature="e#1066#1067#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/model/Cart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="11" column="14" lean-forward="false" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-          <folding>
-            <element signature="e#725#726#0" expanded="false" />
-            <element signature="e#754#755#0" expanded="false" />
-            <element signature="e#795#796#0" expanded="false" />
-            <element signature="e#831#832#0" expanded="false" />
-            <element signature="e#875#876#0" expanded="false" />
-            <element signature="e#907#908#0" expanded="false" />
-            <element signature="e#965#966#0" expanded="false" />
-            <element signature="e#1007#1008#0" expanded="false" />
-            <element signature="e#1044#1045#0" expanded="false" />
-            <element signature="e#1075#1076#0" expanded="false" />
-            <element signature="e#1125#1126#0" expanded="false" />
-            <element signature="e#1165#1166#0" expanded="false" />
-            <element signature="e#1197#1198#0" expanded="false" />
-            <element signature="e#1225#1226#0" expanded="false" />
-            <element signature="e#1267#1268#0" expanded="false" />
-            <element signature="e#1301#1302#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/model/Customer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="819">
-          <caret line="43" column="32" lean-forward="false" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1120#1121#0" expanded="false" />
-            <element signature="e#1169#1170#0" expanded="false" />
-            <element signature="e#1213#1214#0" expanded="false" />
-            <element signature="e#1252#1253#0" expanded="false" />
-            <element signature="e#1287#1288#0" expanded="false" />
-            <element signature="e#1343#1344#0" expanded="false" />
-            <element signature="e#1391#1392#0" expanded="false" />
-            <element signature="e#1431#1432#0" expanded="false" />
-            <element signature="e#1467#1468#0" expanded="false" />
-            <element signature="e#1525#1526#0" expanded="false" />
-            <element signature="e#1575#1576#0" expanded="false" />
-            <element signature="e#1615#1616#0" expanded="false" />
-            <element signature="e#1651#1652#0" expanded="false" />
-            <element signature="e#1709#1710#0" expanded="false" />
-            <element signature="e#1759#1760#0" expanded="false" />
-            <element signature="e#1794#1795#0" expanded="false" />
-            <element signature="e#1825#1826#0" expanded="false" />
-            <element signature="e#1873#1874#0" expanded="false" />
-            <element signature="e#1913#1914#0" expanded="false" />
-            <element signature="e#1948#1949#0" expanded="false" />
-            <element signature="e#1979#1980#0" expanded="false" />
-            <element signature="e#2027#2028#0" expanded="false" />
-            <element signature="e#2067#2068#0" expanded="false" />
-            <element signature="e#2101#2102#0" expanded="false" />
-            <element signature="e#2131#2132#0" expanded="false" />
-            <element signature="e#2178#2179#0" expanded="false" />
-            <element signature="e#2216#2217#0" expanded="false" />
-            <element signature="e#2265#2266#0" expanded="false" />
-            <element signature="e#2302#2303#0" expanded="false" />
-            <element signature="e#2370#2371#0" expanded="false" />
-            <element signature="e#2422#2423#0" expanded="false" />
-            <element signature="e#2473#2474#0" expanded="false" />
-            <element signature="e#2511#2512#0" expanded="false" />
-            <element signature="e#2582#2583#0" expanded="false" />
-            <element signature="e#2636#2637#0" expanded="false" />
-            <element signature="e#2665#2666#0" expanded="false" />
-            <element signature="e#2692#2693#0" expanded="false" />
-            <element signature="e#2730#2731#0" expanded="false" />
-            <element signature="e#2762#2763#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/model/CustomerOrder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="651">
-          <caret line="32" column="37" lean-forward="false" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#777#778#0" expanded="false" />
-            <element signature="e#836#837#0" expanded="false" />
-            <element signature="e#890#891#0" expanded="false" />
-            <element signature="e#919#920#0" expanded="false" />
-            <element signature="e#946#947#0" expanded="false" />
-            <element signature="e#984#985#0" expanded="false" />
-            <element signature="e#1016#1017#0" expanded="false" />
-            <element signature="e#1053#1054#0" expanded="false" />
-            <element signature="e#1084#1085#0" expanded="false" />
-            <element signature="e#1134#1135#0" expanded="false" />
-            <element signature="e#1174#1175#0" expanded="false" />
-            <element signature="e#1223#1224#0" expanded="false" />
-            <element signature="e#1260#1261#0" expanded="false" />
-            <element signature="e#1328#1329#0" expanded="false" />
-            <element signature="e#1380#1381#0" expanded="false" />
-            <element signature="e#1431#1432#0" expanded="false" />
-            <element signature="e#1469#1470#0" expanded="false" />
-            <element signature="e#1540#1541#0" expanded="false" />
-            <element signature="e#1594#1595#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/model/BillingAddress.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="11" column="3" lean-forward="false" selection-start-line="11" selection-start-column="3" selection-end-line="21" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#917#918#0" expanded="false" />
-            <element signature="e#956#957#0" expanded="false" />
-            <element signature="e#1017#1018#0" expanded="false" />
-            <element signature="e#1073#1074#0" expanded="false" />
-            <element signature="e#1110#1111#0" expanded="false" />
-            <element signature="e#1143#1144#0" expanded="false" />
-            <element signature="e#1195#1196#0" expanded="false" />
-            <element signature="e#1239#1240#0" expanded="false" />
-            <element signature="e#1275#1276#0" expanded="false" />
-            <element signature="e#1307#1308#0" expanded="false" />
-            <element signature="e#1357#1358#0" expanded="false" />
-            <element signature="e#1399#1400#0" expanded="false" />
-            <element signature="e#1430#1431#0" expanded="false" />
-            <element signature="e#1457#1458#0" expanded="false" />
-            <element signature="e#1497#1498#0" expanded="false" />
-            <element signature="e#1529#1530#0" expanded="false" />
-            <element signature="e#1561#1562#0" expanded="false" />
-            <element signature="e#1589#1590#0" expanded="false" />
-            <element signature="e#1631#1632#0" expanded="false" />
-            <element signature="e#1665#1666#0" expanded="false" />
-            <element signature="e#1695#1696#0" expanded="false" />
-            <element signature="e#1721#1722#0" expanded="false" />
-            <element signature="e#1759#1760#0" expanded="false" />
-            <element signature="e#1789#1790#0" expanded="false" />
-            <element signature="e#1826#1827#0" expanded="false" />
-            <element signature="e#1857#1858#0" expanded="false" />
-            <element signature="e#1907#1908#0" expanded="false" />
-            <element signature="e#1947#1948#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/model/ShippingAddress.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
@@ -1127,39 +727,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/controller/CartController.java" />
-    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/views/template/header.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1281">
-          <caret line="61" column="57" lean-forward="false" selection-start-line="61" selection-start-column="57" selection-end-line="61" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/controller/admin/AdminController.java" />
     <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="8" column="15" lean-forward="false" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="19" column="58" lean-forward="false" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="58" />
-          <folding>
-            <marker date="1532364902677" expanded="true" signature="2662:2724" ph="SELECT usern... authorities" />
-            <marker date="1532364902677" expanded="true" signature="2791:2855" ph="SELECT usern... users" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/dispatcher-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1197,14 +769,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/views/addProduct.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="12" column="75" lean-forward="false" selection-start-line="12" selection-start-column="75" selection-end-line="12" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/model/CartItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
@@ -1218,9 +782,9 @@
         <state relative-caret-position="168">
           <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#538#539#0" expanded="true" />
-            <element signature="e#568#569#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#538#539#0" expanded="false" />
+            <element signature="e#568#569#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1254,7 +818,7 @@
         <state relative-caret-position="220">
           <caret line="96" column="24" lean-forward="false" selection-start-line="96" selection-start-column="24" selection-end-line="96" selection-end-column="24" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1267,14 +831,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/views/productList.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="32" column="60" lean-forward="false" selection-start-line="32" selection-start-column="60" selection-end-line="32" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/views/productInventory.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="366">
@@ -1283,11 +839,332 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/views/addProduct.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="12" column="75" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/model/BillingAddress.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="17" column="25" lean-forward="true" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/model/Customer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-63">
+          <caret line="19" column="32" lean-forward="true" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+          <folding>
+            <element signature="e#1526#1527#0" expanded="false" />
+            <element signature="e#1564#1565#0" expanded="false" />
+            <element signature="e#1626#1627#0" expanded="false" />
+            <element signature="e#1680#1681#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/model/Authorities.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="492">
+          <caret line="45" column="5" lean-forward="true" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+          <folding>
+            <element signature="e#778#779#0" expanded="false" />
+            <element signature="e#810#811#0" expanded="false" />
+            <element signature="e#860#861#0" expanded="false" />
+            <element signature="e#902#903#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/views/registerCustomer.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="85" column="32" lean-forward="false" selection-start-line="85" selection-start-column="32" selection-end-line="85" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/model/Users.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="18" column="57" lean-forward="false" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="57" />
+          <folding>
+            <marker date="1532618645483" expanded="true" signature="2662:2724" ph="SELECT usern... authorities" />
+            <marker date="1532618645483" expanded="true" signature="2791:2855" ph="SELECT usern... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/views/registerCustomerSuccess.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-78">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/controller/RegisterController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-15">
+          <caret line="10" column="62" lean-forward="true" selection-start-line="10" selection-start-column="62" selection-end-line="10" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/views/template/header.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="74" column="31" lean-forward="false" selection-start-line="74" selection-start-column="31" selection-end-line="74" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../eMusicStore/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="94" column="21" lean-forward="false" selection-start-line="94" selection-start-column="21" selection-end-line="94" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/service/CustomerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="13" column="4" lean-forward="false" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/dao/CustomerDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="11" column="52" lean-forward="false" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/dao/impl/CustomerDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="86" column="97" lean-forward="true" selection-start-line="86" selection-start-column="97" selection-end-line="86" selection-end-column="97" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/service/impl/CustomerServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="29" column="56" lean-forward="true" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="56" />
+          <folding>
+            <element signature="e#577#578#0" expanded="false" />
+            <element signature="e#639#640#0" expanded="false" />
+            <element signature="e#799#800#0" expanded="false" />
+            <element signature="e#865#866#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/service/impl/CartServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#414#415#0" expanded="false" />
+            <element signature="e#464#465#0" expanded="false" />
+            <element signature="e#500#501#0" expanded="false" />
+            <element signature="e#536#537#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/dao/CartDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/service/CartService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="7" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/dao/impl/CartDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="33" column="4" lean-forward="false" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/service/CartItemService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="37" lean-forward="false" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/dao/impl/CartItemDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="44" column="71" lean-forward="false" selection-start-line="44" selection-start-column="71" selection-end-line="44" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/dao/CartItemDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="51" lean-forward="false" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/service/impl/CartItemServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="29" column="4" lean-forward="false" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#483#484#0" expanded="true" />
+            <element signature="e#532#533#0" expanded="true" />
+            <element signature="e#585#586#0" expanded="true" />
+            <element signature="e#637#638#0" expanded="true" />
+            <element signature="e#677#678#0" expanded="true" />
+            <element signature="e#720#721#0" expanded="true" />
+            <element signature="e#781#782#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/dispatcher-servlet.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="16" column="110" lean-forward="false" selection-start-line="16" selection-start-column="110" selection-end-line="16" selection-end-column="110" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/controller/CartController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="26" column="40" lean-forward="false" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/views/productList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="32" column="60" lean-forward="false" selection-start-line="32" selection-start-column="60" selection-end-line="32" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/views/viewProduct.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
-          <caret line="35" column="65" lean-forward="false" selection-start-line="35" selection-start-column="65" selection-end-line="35" selection-end-column="65" />
+          <caret line="44" column="58" lean-forward="false" selection-start-line="44" selection-start-column="58" selection-end-line="44" selection-end-column="58" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/views/cart.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="51" column="49" lean-forward="false" selection-start-line="51" selection-start-column="49" selection-end-line="51" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/webapp/WEB-INF/resources/js/cartcontroller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="30" column="31" lean-forward="false" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/controller/CartREST.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="63" column="23" lean-forward="false" selection-start-line="63" selection-start-column="23" selection-end-line="63" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1259#1260#0" expanded="true" />
+            <element signature="e#1313#1314#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/service/CustomerOrderService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="7" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/dao/CustomerOrderDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/dao/impl/CustomerOrderDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/service/impl/CustomerOrderServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="36" column="5" lean-forward="false" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#693#694#0" expanded="true" />
+            <element signature="e#757#758#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../eMusicStore/src/main/java/com/emusicstore/controller/OrderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="19" column="54" lean-forward="false" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1371,7 +1248,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
+          <last-edited>Maven: org.springframework.security:spring-security-web:3..RELEASE</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

@@ -6,8 +6,7 @@ import org.springframework.stereotype.Repository;
 
 public interface CartDao {
 
-    Cart create(Cart cart);
-    Cart read(int cartId);
-    void update(int cartId, Cart cart);
-    void delete(int cartId);
+    Cart getCartById(int cartId);
+    void update(Cart cart);
+
 }
