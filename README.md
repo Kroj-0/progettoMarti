@@ -2,8 +2,8 @@
 Progetto Basi Dati Marti
 
 # DONE:
--model definitivi
--rework controller parte 1: Home/Admin e Prodotti/Vista Prodotti
+- model definitivi
+- rework controller parte 1: Home/Admin e Prodotti/Vista Prodotti
 
 # DA RIVEDERE?
 - modello relazionale tra product-->cartItem-->cart-->order, possibile semplificazione e miglioramento della logica di buisness
