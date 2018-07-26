@@ -8,14 +8,14 @@ Progetto Basi Dati Marti
 # DA RIVEDERE?
 - modello relazionale tra product-->cartItem-->cart-->order, possibile semplificazione e miglioramento della logica di buisness
 
-# TO DO
+# TO DO:
 - registrazione clienti
 - cart controller
 - creazione ordine cliente
 - simulazione checkout
 - gestione ordini e clienti da parte dell'admin
 
-# Richieste originali
+# Richieste originali:
 
 Un’azienda che commercializza prodotti di elettronica di consumo (è possibile scegliere qualsiasi altra
 merce o servizio da vendere) deve commissionare un applicativo web per vendere i suoi prodotti on line
@@ -45,5 +45,7 @@ che abbia le seguente caratteristiche:
 
 Il sistema prevede che le categorie di utenti sia così rappresentata:
 • utenti pubblici che possono solamente eseguire i punti 1 e 2 ed eventualmente registrarsi.
+
 • utenti registrati che possono effettuare i punti fino al punto 8 compreso
+
 • amministratori che possono effettuare i punti dal 9 al 14 compresi 
