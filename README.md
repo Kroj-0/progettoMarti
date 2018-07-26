@@ -44,6 +44,7 @@ che abbia le seguente caratteristiche:
   13. Opzionale (o per progetto in 2 persone): gestione dei coupon o buoni sconto
 
 Il sistema prevede che le categorie di utenti sia così rappresentata:
+
 • utenti pubblici che possono solamente eseguire i punti 1 e 2 ed eventualmente registrarsi.
 
 • utenti registrati che possono effettuare i punti fino al punto 8 compreso
