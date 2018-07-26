@@ -14,6 +14,8 @@ Progetto Basi Dati Marti
 - creazione ordine cliente
 - simulazione checkout
 - gestione ordini e clienti da parte dell'admin
+- ...(vedi richieste originali mancanti)
+- rework della grafica/testi
 
 # Richieste originali:
 
