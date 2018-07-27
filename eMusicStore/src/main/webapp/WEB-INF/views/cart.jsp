@@ -23,6 +23,8 @@
             <div  ng-init="initCartId('${cartId}')">
             <div>
                 <a class="btn btn-danger pull-left" ng-click="clearCart()"><span class="glyphicon-remove-sign"></span>Clear cart</a>
+                <a href="<c:url value="/order/${cartId}"/>" class="btn btn-success pull-right"><span
+                        class="glyphicon glyphicon-shopping-cart">Checkout</span></a>
             </div>
 
             <table class="table table-hover">

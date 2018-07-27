@@ -1,7 +1,7 @@
 <%--
   Created by IntelliJ IDEA.
-  User: Le
-  Date: 1/7/2016
+  User: marti
+  Date: 1/7/2018
   Time: 7:09 PM
   To change this template use File | Settings | File Templates.
 --%>
@@ -29,6 +29,14 @@
         </h3>
 
         <p>Here you can view, check and modify the product inventory!</p>
+
+        <br><br>
+
+        <h3>
+            <a href="<c:url value="/admin/customer" />" >Customer Management</a>
+        </h3>
+
+        <p>Here you can view and manage customers/users!</p>
 
 
         <%@include file="/WEB-INF/views/template/footer.jsp" %>
