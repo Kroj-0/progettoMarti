@@ -14,6 +14,7 @@ Progetto Basi Dati Marti
 # DA RIVEDERE?
 - modello relazionale tra product-->cartItem-->cart-->order, possibile semplificazione e miglioramento della logica
 - forse è meglio non mettere le password in chiaro nel db
+- mettere un timestamp per gli ordini?
 
 # TO DO:
 - <s>registrazione clienti</s>
