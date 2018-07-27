@@ -6,10 +6,10 @@ Progetto Basi Dati Marti
 - rework controller e jsp parte 1: Home/Admin e Prodotti/Vista Prodotti     <strong>funzionante</strong>
 - rework controller e jsp parte 2: registrazione clienti     <strong>funzionante</strong>
 - rework cart REST services completato     <strong>funzionante</strong>
-- DAO e Servizi implementati totalmente, tranne quelli possibilmente necessari per checkout e gestione ordini da parte degli admin
 - model, dao, services, controller per gli ordini implementati      <strong>funzionante</strong>
 - checkout flow and order confirmation <strong>funzionante</strong>
 - aggiunta sulla pagina admin della possibilità di vedere gli utenti, manca ancora la parte di gestione di questi <strong>funzionante</strong>
+- DAO, controller e Servizi implementati totalmente per i punti sopra svolti
 
 # DA RIVEDERE?
 - modello relazionale tra product-->cartItem-->cart-->order, possibile semplificazione e miglioramento della logica
