@@ -16,7 +16,7 @@ Progetto Basi Dati Marti
 - <s>modello relazionale tra product-->cartItem-->cart-->order, possibile semplificazione e miglioramento della logica</s>
   <strong>cambiato il funzionamento, attendere update, in via di testing, sembra funzionante</strong>
 - forse è meglio non mettere le password in chiaro nel db
-- mettere un timestamp per gli ordini?
+- <s>mettere un timestamp per gli ordini?</s> <strong>Fatto, vedi sopra al punto uno</strong>
 
 # TO DO:
 - <s>registrazione clienti</s>
