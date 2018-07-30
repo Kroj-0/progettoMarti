@@ -13,6 +13,8 @@ public class Authorities {
     private String password;
     private String authority;
 
+
+
     public int getAuthId() {
         return authId;
     }
@@ -44,4 +46,6 @@ public class Authorities {
     public void setAuthority(String authority) {
         this.authority = authority;
     }
+
+
 }

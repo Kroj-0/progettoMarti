@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/eMusicStore.iml" filepath="$PROJECT_DIR$/eMusicStore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/emusicstore.iml" filepath="$PROJECT_DIR$/emusicstore.iml" />
     </modules>
   </component>
 </project>

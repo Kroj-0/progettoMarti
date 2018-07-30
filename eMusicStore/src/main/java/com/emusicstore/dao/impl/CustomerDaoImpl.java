@@ -47,6 +47,7 @@ public class CustomerDaoImpl implements CustomerDao {
         newAuthority.setAuthority("ROLE_USER");
         newAuthority.setPassword(customer.getPassword());
 
+
         session.saveOrUpdate(newUser);
         session.saveOrUpdate(newAuthority);
 
@@ -86,5 +87,25 @@ public class CustomerDaoImpl implements CustomerDao {
 
         // attraverso '?' indico una variabile, con setString associo alla prima occorrenza di ? lo username passato come parametro
         //Siccome username è chiave primaria, il risultato sara univoco: posso castare la query a oggetto customer con uniqueResult()
+    }
+
+    public void editEnable(Customer customer) {
+        //aggiorno customer dalla form
+        Session session=sessionFactory.getCurrentSession();
+        session.saveOrUpdate(customer);
+        session.flush();
+
+
+        System.out.println(">>>>>>>>>>>>>>>>>>prendo l'user corrispondente al customer attraverso il customerId");
+        Query query=session.createQuery("from Users where customerId = ?");
+        query.setInteger(0, customer.getCustomerId());
+        Users users= (Users)query.uniqueResult();
+        System.out.println(">>>>>>>>>>>>>> " + users.getUserId() + users.getUsername() + users.isEnabled() + users.getCustomerId());
+        users.setEnabled(customer.isEnabled());
+        System.out.println(">>>>>>>>>>>>>> " + users.getUserId() + users.getUsername() + users.isEnabled() + users.getCustomerId());
+        System.out.println(">>>>>>>>>>>>>>>>>>aggiorno la tabella users");
+        session.saveOrUpdate(users);
+        session.flush();
+
     }
 }

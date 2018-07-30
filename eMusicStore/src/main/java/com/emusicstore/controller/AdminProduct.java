@@ -91,15 +91,21 @@ public class AdminProduct {
 //                throw new RuntimeException("Product image saving failed");
 //            }
 //        }
-        //ok cosi funziona! A quanto pare non faceva overwrite, nonostante il metodo transferTo() lo preveda.
-        try{
-            if(Files.deleteIfExists(path)){
-                productImage.transferTo(new File(path.toString()));
+        //1: ok cosi funziona! A quanto pare non faceva overwrite, nonostante il metodo transferTo() lo preveda.
+        //2: .....non funziona.... lol
+        //3: non funziona perche le salvo nel war? Perche se applico il metodo, nella cartella out/../images l'immagine cambia,
+        //   ma non cambia nel sito. Bisogna provare a salvarle fuori dal war, o addirittura salvarle su database (non so come)
+        if(productImage!=null && !productImage.isEmpty()) {
+            try {
+                if (Files.exists(path)) {
+                    Files.delete(path);
+                    productImage.transferTo(new File(path.toString()));
 
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+                throw new RuntimeException("Product image saving failed");
             }
-        }catch (IOException e){
-            e.printStackTrace();
-            throw new RuntimeException("Product image saving failed");
         }
 
         productService.editProduct(product);

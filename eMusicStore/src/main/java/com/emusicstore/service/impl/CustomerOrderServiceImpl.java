@@ -35,4 +35,29 @@ public class CustomerOrderServiceImpl implements CustomerOrderService{
 
         return total;
     }
+
+    public int getLastOrderId() {
+        return customerOrderDao.getLastOrderId();
+    }
+
+    public List<CustomerOrder> getAllOrders() {
+        return customerOrderDao.getAllOrders();
+    }
+    public List<CustomerOrder> getOrdersByCustomerId(int customerId){
+        return  customerOrderDao.getOrdersByCustomerId(customerId);
+    }
+
+    public CustomerOrder getOrdersByKey(int productId, int orderId){
+        return customerOrderDao.getOrdersByKey(productId,orderId);
+    }
+
+    public List<CustomerOrder> getLinkedOrders(CustomerOrder customerOrder) {
+        return customerOrderDao.getLinkedOrders(customerOrder);
+    }
+
+    public void changeStatus(CustomerOrder customerOrder) {
+        customerOrderDao.changeStatus(customerOrder);
+    }
+
+
 }

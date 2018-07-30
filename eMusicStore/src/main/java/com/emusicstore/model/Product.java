@@ -1,6 +1,8 @@
 package com.emusicstore.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -10,6 +12,7 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.Pattern;
 import java.io.Serializable;
 import java.util.List;
+import java.util.Set;
 
 
 @Entity
@@ -43,9 +46,19 @@ public class Product implements Serializable{
     //definisce la relazione con cartitem, product=padre, cartitem=figlio, con cascade cancello il figlio se cancello il padre
     //lazy=non va nel db per prendere info prima del loro utilizzo. Serve eager perche dovro portare product in JSON
     //campi marcati JSONIgnore vengono ignorati al momento della conversione, per evitare loop di campi collegati tra loro
+
+    //update: messi a set e @LazyCollection se no mi insulta hibernate perche ci sono due liste e due fetch da fare per la stessa entita
+    @LazyCollection(LazyCollectionOption.FALSE)
     @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JsonIgnore
-    private List<CartItem> cartItemlList;
+    private Set<CartItem> cartItemList;
+
+    @LazyCollection(LazyCollectionOption.FALSE)
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
+    private Set<CustomerOrder> orderSet;
+
+//    @OneToMany(mappedBy ="product" , cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+//    private List<OrderDetail> orderDetails;
 
     public int getProductId() {
         return productId;
@@ -127,11 +140,20 @@ public class Product implements Serializable{
         this.productImage = productImage;
     }
 
-    public List<CartItem> getCartItemlList() {
-        return cartItemlList;
+    public Set<CartItem> getCartItemList() {
+        return cartItemList;
     }
 
-    public void setCartItemlList(List<CartItem> cartItemlList) {
-        this.cartItemlList = cartItemlList;
+    public void setCartItemList(Set<CartItem> cartItemList) {
+        this.cartItemList = cartItemList;
     }
+
+
+//    public List<OrderDetail> getOrderDetails() {
+//        return orderDetails;
+//    }
+//
+//    public void setOrderDetails(List<OrderDetail> orderDetails) {
+//        this.orderDetails = orderDetails;
+//    }
 }

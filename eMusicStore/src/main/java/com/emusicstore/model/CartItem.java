@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @Table(name="cartitem")
@@ -26,6 +27,7 @@ public class CartItem implements Serializable {
 
     private int quantity;
     private double total;
+
 
     public int getCartItemId() {
         return cartItemId;
@@ -66,4 +68,6 @@ public class CartItem implements Serializable {
     public void setTotal(double total) {
         this.total = total;
     }
+
+
 }

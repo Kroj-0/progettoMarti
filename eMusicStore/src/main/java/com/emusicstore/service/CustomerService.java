@@ -12,4 +12,5 @@ public interface CustomerService {
     Customer getCustomerById(int customerId);
     List<Customer> getCustomerList();
     Customer getCustomerByUsername(String username);
+    void editEnable(Customer customer);
 }
