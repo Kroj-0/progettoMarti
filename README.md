@@ -7,16 +7,16 @@ Progetto Basi Dati Marti
 - rework controller e jsp parte 2: registrazione clienti     <strong>funzionante</strong>
 - rework cart REST services completato     <strong>funzionante</strong>
 - model, dao, services, controller per gli ordini implementati      <strong>funzionante</strong>
-- checkout flow and order confirmation <strong>funzionante</strong>
-- aggiunta sulla pagina admin della possibilità di vedere gli utenti, manca ancora la parte di gestione di questi <strong>funzionante</strong>
+- checkout flow, payment(seen as order submitted), shippingaddress declaration and order confirmation <strong>funzionante</strong>
+- gestione utenti e gestione ordini/stati ordini completata <strong>funzionante</strong>
+- cambiate le relazioni per semplificare gli ordini <strong>funzionante</strong>
+- date added to orders <strong>funzionante</strong>
+- Possibilità di visualizzare gli ordini effettuati e di marcarli come consegnati <strong>funzionante</strong>
 - DAO, controller e Servizi implementati totalmente per i punti sopra svolti
-- gestione utenti fatta, gestione ordini in sviluppo, attendere update a breve
 
 # DA RIVEDERE?
-- <s>modello relazionale tra product-->cartItem-->cart-->order, possibile semplificazione e miglioramento della logica</s>
-  <strong>cambiato il funzionamento, attendere update, in via di testing, sembra funzionante</strong>
 - forse è meglio non mettere le password in chiaro nel db
-- <s>mettere un timestamp per gli ordini?</s> <strong>Fatto, vedi sopra al punto uno</strong>
+- 
 
 # TO DO:
 - <s>registrazione clienti</s>
@@ -24,19 +24,27 @@ Progetto Basi Dati Marti
 - manca completamente la gestione delle quantità prodotti, al momento non sono in grado di controllare che non vengano venduti più prodotti di quelli disponibili, ne di cambiare manualmente le quantità dei prodotti nel carrello
 - <s>creazione ordine cliente</s>
 - <s>simulazione checkout</s>
-- gestione ordini e clienti da parte dell'admin <em> parziale </em>
+- <s> gestione ordini e clienti da parte dell'admin </s>
 - capacità di navigare il catalogo per marca, tipo, ricerca libera (uso di un plugin third party?)
-- ...(vedi richieste originali mancanti)
+- da richiesta gli admin dovrebbero poter gestire gli altri admin <em>(devo trovare un modo oltre alle autorita riconosciute dalla      spring security, che sono ROLE_USER E ROLE_ADMIN)</em>
+- Gestione di prodotti in push (per cui spingere la vendita) con inserimento in una “vetrina in home page” o in un area promo
+  <em>La vetrina la ho, bisogna mettere le immagini con i relativi link ai prodotti ( o ad una categoria di prodotti)</em>
+- Possibilità di visualizzare lo stato dell’ordine e lo storico degli ordini effettuati
+- <strong>Opzionale (o per progetto in 2 persone)</strong>: gestione del tracking dell’ordine, con simulazione di tutti i
+     cambi di stato (consegnato al corriere, in viaggio, consegnato al destinatario, ecc.)
+     <em> Sarebbe carino da fare e forse neanche troppo impegnativo, vediamo quando finisco le basi </em>
 - rework della grafica/testi
 
 # MIGLIORAMENTI NECESSARI/KNOWN ISSUES:
+- <strong>KNOWN ISSUE:</strong> ogni tanto il javascript che si occupa di gestire il carrello ritorna totali dei carrelli nulli
 - sviluppare un modo per cambiare la quantita degli oggetti nel carrello, non solo rimuoverli in blocco, con un refresh automatico del    prezzo totale basato sulla quantita aggiornata a mano dall'utente
-- cambiando l'url nella visione del carrello, risulta possibile accedere ai carrelli di altri utenti, poichè il formato dell'url risulta
+- <s> cambiando l'url nella visione del carrello, risulta possibile accedere ai carrelli di altri utenti, poichè il formato dell'url risulta
                                           
                                           http://localhost:8080/customer/cart/1
                                           
- dove l'int rappresenta il cartId univoco per il cliente
- - se modifico un prodotto già esistente come admin, la modifica dell'immagine non funziona sempre (il perchè è un mistero)
+ dove l'int rappresenta il cartId univoco per il cliente </s>
+ - se modifico un prodotto già esistente come admin, la modifica dell'immagine non funziona sempre <s>(il perchè è un mistero)</s>
+   <em> A quanto pare non salva fino al restart dell'app, probabilmente perche sono all'interno del progetto. Bisognerebbe provare a salvarli in una cartella esterna temporanea, passandone il path al file xml</em>
  - se come admin metto un prodotto "INACTIVE", lo posso comunque vedere lo stesso nella lista prodotti. Ora questo mi può andare bene per la visione dell'admin (anche se deve essere segnalato in qualche modo), ma l'utente non deve poterli vedere. Tantomeno ordinarli, perchè adesso se li vede li può anche ordinare. All'infinito. (lol)
  - visione del singolo prodotto e inserimento nel carrello, bruttino ma secondario
 
