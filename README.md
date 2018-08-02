@@ -12,6 +12,7 @@ Progetto Basi Dati Marti
 - cambiate le relazioni per semplificare gli ordini <strong>funzionante</strong>
 - date added to orders <strong>funzionante</strong>
 - Possibilità di visualizzare gli ordini effettuati e di marcarli come consegnati <strong>funzionante</strong>
+- pagina utente con ordini, dati utente e indirizzi, gli ultimi due modificabili, completata <strong>funzionante</strong>
 - DAO, controller e Servizi implementati totalmente per i punti sopra svolti
 
 # DA RIVEDERE?
