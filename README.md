@@ -29,7 +29,7 @@ Progetto Basi Dati Marti
 - da richiesta gli admin dovrebbero poter gestire gli altri admin <em>(devo trovare un modo oltre alle autorita riconosciute dalla      spring security, che sono ROLE_USER E ROLE_ADMIN)</em>
 - Gestione di prodotti in push (per cui spingere la vendita) con inserimento in una “vetrina in home page” o in un area promo
   <em>La vetrina la ho, bisogna mettere le immagini con i relativi link ai prodotti ( o ad una categoria di prodotti)</em>
-- Possibilità di visualizzare lo stato dell’ordine e lo storico degli ordini effettuati
+- <s>Possibilità di visualizzare lo stato dell’ordine e lo storico degli ordini effettuati</s>
 - <strong>Opzionale (o per progetto in 2 persone)</strong>: gestione del tracking dell’ordine, con simulazione di tutti i
      cambi di stato (consegnato al corriere, in viaggio, consegnato al destinatario, ecc.)
      <em> Sarebbe carino da fare e forse neanche troppo impegnativo, vediamo quando finisco le basi </em>
@@ -44,8 +44,9 @@ Progetto Basi Dati Marti
                                           
  dove l'int rappresenta il cartId univoco per il cliente </s>
  - se modifico un prodotto già esistente come admin, la modifica dell'immagine non funziona sempre <s>(il perchè è un mistero)</s>
-   <em> A quanto pare non salva fino al restart dell'app, probabilmente perche sono all'interno del progetto. Bisognerebbe provare a salvarli in una cartella esterna temporanea, passandone il path al file xml</em>
- - se come admin metto un prodotto "INACTIVE", lo posso comunque vedere lo stesso nella lista prodotti. Ora questo mi può andare bene per la visione dell'admin (anche se deve essere segnalato in qualche modo), ma l'utente non deve poterli vedere. Tantomeno ordinarli, perchè adesso se li vede li può anche ordinare. All'infinito. (lol)
+   <em> A quanto pare non salva fino al restart dell'app, probabilmente perche sono all'interno del progetto. Bisognerebbe provare a salvarli in una cartella esterna temporanea, passandone il path al file xml.
+Altra opzione e' capire come funziona l'inserimento delle immagini in un db, ma non avrei voglia di rimettere mano ai modelli</em>
+ - <s>se come admin metto un prodotto "INACTIVE", lo posso comunque vedere lo stesso nella lista prodotti. Ora questo mi può andare bene per la visione dell'admin (anche se deve essere segnalato in qualche modo), ma l'utente non deve poterli vedere. Tantomeno ordinarli, perchè adesso se li vede li può anche ordinare. All'infinito. (lol) </s>
  - modificare il checkout flow (un po' di ricerca necessaria) in modo tale che se il cliente non completa il checkout, lo stato dell'ordine risulta "nocheckout", o ancora meglio, quando clicco per andare al checkout non creo l'ordine direttamente come succede adesso, ma lo faccio a checkout completato
  - visione del singolo prodotto e inserimento nel carrello, bruttino ma secondario
 
