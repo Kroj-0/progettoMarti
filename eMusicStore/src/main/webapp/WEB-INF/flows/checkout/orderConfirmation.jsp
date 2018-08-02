@@ -20,6 +20,13 @@
             <p class="lead">Order Confirmation:</p>
         </div>
         <div class="container">
+            <ul class="nav nav-pills">
+                <li><a >Basic Info</a></li>
+                <li><a >Shipping</a></li>
+                <li class="active"><a >Checkout</a></li>
+            </ul>
+        </div>
+        <div class="container">
             <div class="row">
                 <form:form commandName="order" class="form-horizontal">
                     <div class="well col-xs-10 col-sm-10 col-md-6 col-xs-offset-1 col-sm-offset-1 col-md-offset-3">
@@ -98,5 +105,6 @@
                 </form:form>
             </div>
         </div>
-
+<div class="container"
         <%@include file="/WEB-INF/views/template/footer.jsp" %>
+    </div>

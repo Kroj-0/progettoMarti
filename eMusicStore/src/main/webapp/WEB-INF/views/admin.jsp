@@ -25,30 +25,46 @@
             </c:if>
             </div>
         <div class="container">
-            <div class="col-md-4 bg-success">
-                <h3>
-                    <a href="<c:url value="/admin/productInventory" />" >Product Inventory</a>
-                </h3>
-                <p>Here you can view, check and modify the product inventory!</p>
-                <br><br>
-            </div>
+            <ul class="list-group">
+                <li class="list-group-item clearfix">
 
-            <div class="col-md-4 bg-light">
-                <h3>
-                    <a href="<c:url value="/admin/users" />" >Customer Management</a>
-                </h3>
-                <p>Here you can view and manage customers/users!</p>
-                <br><br>
-            </div>
-            <div class="col-md-4 bg-info">
-                <h3>
-                    <a href="<c:url value="/admin/orders" />" >Orders Management</a>
-                </h3>
-                <p>Here you can view and manage all the orders!</p>
-                <p>* If a user contacted you for a problem in his order, you can retrieve his order directly from Customer Management</p>
-            </div>
-            <br><br>
-
+                    <a href="<c:url value="/admin/productInventory" />" />
+                        <div class="row">
+                            <div class="container">
+                                <h3>
+                                    Product Inventory
+                                </h3>
+                                <p>Here you can view, check and modify the product inventory!</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="list-group-item clearfix">
+                    <a href="<c:url value="/admin/users" />"/>
+                        <div class="row">
+                            <div class="container">
+                                <h3>
+                                    Customer Management
+                                </h3>
+                                <p>Here you can view and manage customers/users!</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="list-group-item clearfix">
+                    <a href="<c:url value="/admin/orders" />">
+                        <div class="row">
+                            <div class="container">
+                                <h3>
+                                    Orders Management
+                                </h3>
+                                <p>Here you can view and manage all the orders!</p>
+                                <p>* If a user contacted you for a problem in his order, you can retrieve his order directly from Customer Management</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
         </div>
         <%@include file="/WEB-INF/views/template/footer.jsp" %>
 

@@ -17,7 +17,7 @@
 
             <p class="lead">This is the customer management page</p>
         </div>
-        <div class="container">
+        <div class="container" style="margin-bottom: 10px">
             <div class="col-md-30">
                 <a href="<c:url value="/admin"/>" class="btn btn-default pull-left" >Back to Admin Page</a>
             </div>

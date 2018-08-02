@@ -61,9 +61,10 @@
                     <ul class="nav navbar-nav pull-right">
                         <c:if test="${pageContext.request.userPrincipal.name!=null}">
                             <li><a>Welcome: ${pageContext.request.userPrincipal.name}</a></li>
-                            <li><a href="<c:url value="/j_spring_security_logout" />">Logout</a></li>
+                            <li><a href="<c:url value="/j_spring_security_logout" />" onclick="eraseCookie('getCookie(\'user\')')">Logout</a></li>
                             <c:if test="${pageContext.request.userPrincipal.name != 'admin'}">
                                 <li><a href="<c:url value="/customer/cart" />">Cart</a></li>
+                                <li><a href="<c:url value="/customer" />">My Account</a></li>
                             </c:if>
                             <c:if test="${pageContext.request.userPrincipal.name == 'admin'}">
                                 <li><a href="<c:url value="/admin" />">Admin</a></li>
@@ -80,3 +81,4 @@
 
     </div>
 </div>
+<script src="<c:url value="/resources/js/cookies.js"/> "></script>

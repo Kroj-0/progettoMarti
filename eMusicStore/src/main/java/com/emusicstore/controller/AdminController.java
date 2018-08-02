@@ -76,14 +76,6 @@ public class AdminController {
         return "viewCustomer";
     }
 
-//    @RequestMapping("/users/editCustomer/{customerId}")
-//    public String editCustomer(@PathVariable("customerId") int customerId, Model model){
-//        System.out.println(">>>>>>>>>>>>>>>>sono entrato");
-//        Customer customer=customerService.getCustomerById(customerId);
-//        model.addAttribute("customer", customer);
-//        return "viewCustomer";
-//    }
-
     @RequestMapping(value="/users/editCustomer", method = RequestMethod.POST)
     public String editCustomerPost(@Valid @ModelAttribute("customer") Customer customer, BindingResult result) {
         System.out.println(">>>>>>>>>>>>>>>>sono entrato nel metodo post");

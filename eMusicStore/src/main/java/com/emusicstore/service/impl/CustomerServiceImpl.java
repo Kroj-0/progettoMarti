@@ -33,4 +33,12 @@ public class CustomerServiceImpl implements CustomerService {
     public void editEnable(Customer customer){
         customerDao.editEnable(customer);
     }
+
+    public void editCustomerDetails(Customer customer) {
+        customerDao.editCustomerDetails(customer);
+    }
+
+    public void updateShAd(Customer customer) {
+        customerDao.updateShAd(customer);
+    }
 }

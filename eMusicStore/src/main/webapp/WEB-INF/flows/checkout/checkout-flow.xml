@@ -5,6 +5,7 @@
       http://www.springframework.org/schema/webflow/spring-webflow.xsd">
 
     <var name="order" class="com.emusicstore.model.CustomerOrder"/>
+    <!--<var name="controller" class="com.emusicstore.controller.OrderController"/>-->
 
     <action-state id="addCartToOrder">
         <evaluate expression="cartDaoImpl.validate(requestParameters.cartId)" result="order.cart"/>

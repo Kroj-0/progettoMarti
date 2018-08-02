@@ -12,13 +12,21 @@
 
 <div class="container-wrapper">
     <div class="container">
+        <ul class="nav nav-pills">
+            <li class="active"><a >Basic Info</a></li>
+            <li><a >Shipping</a></li>
+            <li><a >Checkout</a></li>
+        </ul>
+    </div>
+    <div class="container">
         <div class="page-header">
-            <h1>Customer</h1>
 
-            <p class="lead">Customer Details:</p>
+            <h3>Basic Info</h3>
+
         </div>
 
-        <h3>Basic Info</h3>
+    <div class="container">
+
         <form:form commandName="order" class="form-horizontal">
         <div class="form-group">
             <label for="name">Name</label> <form:errors path="cart.customer.customerName" cssStyle="color: #ff0000;" />
@@ -36,9 +44,9 @@
             <label for="phone">Phone</label> <form:errors path="cart.customer.customerPhone" cssStyle="color: #ff0000;" />
             <form:input path="cart.customer.customerPhone" id="phone" class="form-Control"/>
         </div>
-
-        <h3>Billing Address</h3>
-
+        <div class="page-header">
+            <h3>Billing Address</h3>
+        </div>
         <div class="form-group">
             <label for="street">Street </label><form:input path="cart.customer.billingAddress.streetName" id="street" class="form-Control"/>
         </div>
@@ -61,6 +69,6 @@
         <input type="submit" value="Next" class="btn btn-default" name="_eventId_customerInfoCollected"/>
         <button class="btn btn-default" name="_eventId_cancel">Cancel</button>
         </form:form>
-
+    </div>
 
         <%@include file="/WEB-INF/views/template/footer.jsp" %>

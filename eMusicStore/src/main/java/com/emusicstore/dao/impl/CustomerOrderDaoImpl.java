@@ -35,7 +35,7 @@ public class CustomerOrderDaoImpl implements CustomerOrderDao {
 
     public List<CustomerOrder> getAllOrders() {
         Session session=sessionFactory.getCurrentSession();
-        Query query=session.createQuery("from CustomerOrder");
+        Query query=session.createQuery("from CustomerOrder order by date desc");
         List<CustomerOrder> customerOrderList=query.list();
         session.flush();
 
@@ -44,7 +44,7 @@ public class CustomerOrderDaoImpl implements CustomerOrderDao {
 
     public List<CustomerOrder> getOrdersByCustomerId(int customerId) {
         Session session=sessionFactory.getCurrentSession();
-        Query query=session.createQuery("from CustomerOrder where CustomerId = ?");
+        Query query=session.createQuery("from CustomerOrder where CustomerId = ? order by date desc");
         query.setInteger(0, customerId);
         List<CustomerOrder> customerOrderList=query.list();
         session.flush();

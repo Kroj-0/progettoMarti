@@ -12,12 +12,14 @@
 
 <div class="container-wrapper">
     <div class="container">
-        <div class="page-header">
-            <h1>Customer</h1>
+    <ul class="nav nav-pills">
+        <li><a >Basic Info</a></li>
+        <li class="active"><a >Shipping</a></li>
+        <li><a >Checkout</a></li>
+    </ul>
+    </div>
 
-            <p class="lead">Customer Details:</p>
-        </div>
-
+    <div class="container">
     <form:form commandName="order" class="form-horizontal">
 
         <h3>Shipping Address</h3>
@@ -46,6 +48,8 @@
         <button class="btn btn-default" name="_eventId_cancel">Cancel</button>
 
     </form:form>
+    </div>
 
-
+<div class="container"
         <%@include file="/WEB-INF/views/template/footer.jsp" %>
+</div>

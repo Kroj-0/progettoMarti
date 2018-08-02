@@ -23,6 +23,8 @@
             </tr>
             </thead>
             <c:forEach items="${products}" var="product">
+                <c:set var="inactive" value="inactive"/>
+                <c:if test="${product.productStatus!=inactive}">
                 <tr>
                     <td><img src="<c:url value="/resources/images/${product.productId}.png" /> " alt="image"
                              style="width:100%"/></td>
@@ -33,6 +35,7 @@
                     <td><a href="<spring:url value="/product/viewProduct/${product.productId}" />"
                     ><span class="glyphicon glyphicon-info-sign"></span></a></td>
                 </tr>
+                </c:if>
             </c:forEach>
         </table>
 

@@ -108,4 +108,31 @@ public class CustomerDaoImpl implements CustomerDao {
         session.flush();
 
     }
+
+    public void editCustomerDetails(Customer customer) {
+        Session session=sessionFactory.getCurrentSession();
+        session.update(customer);
+        session.flush();
+        Query query=session.createQuery("from Users where customerId = ?");
+        query.setInteger(0, customer.getCustomerId());
+        Users users= (Users)query.uniqueResult();
+        System.out.println(">>>>>>>>>>>>>> " + users.getUserId() + users.getUsername() + users.isEnabled() + users.getCustomerId());
+        users.setPassword(customer.getPassword());
+        System.out.println(">>>>>>>>>>>>>> " + users.getUserId() + users.getUsername() + users.isEnabled() + users.getCustomerId());
+        System.out.println(">>>>>>>>>>>>>>>>>>aggiorno la tabella users");
+        session.saveOrUpdate(users);
+        session.flush();
+        Query query1=session.createQuery("from Authorities where username = ?");
+        query1.setString(0, customer.getUsername());
+        Authorities authorities= (Authorities) query1.uniqueResult();
+        authorities.setPassword(customer.getPassword());
+        session.saveOrUpdate(authorities);
+        session.flush();
+    }
+
+    public void updateShAd(Customer customer){
+        Session session=sessionFactory.getCurrentSession();
+        session.saveOrUpdate(customer);
+        session.flush();
+    }
 }
