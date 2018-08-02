@@ -13,6 +13,7 @@ Progetto Basi Dati Marti
 - date added to orders <strong>funzionante</strong>
 - Possibilità di visualizzare gli ordini effettuati e di marcarli come consegnati <strong>funzionante</strong>
 - pagina utente con ordini, dati utente e indirizzi, gli ultimi due modificabili, completata <strong>funzionante</strong>
+- all'utente non e' piu' possibile vedere prodotti inattivi o comprarli <strong>funzionante</strong>
 - DAO, controller e Servizi implementati totalmente per i punti sopra svolti
 
 # DA RIVEDERE?
