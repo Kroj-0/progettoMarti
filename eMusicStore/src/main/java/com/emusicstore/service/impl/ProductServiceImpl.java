@@ -33,4 +33,16 @@ public class ProductServiceImpl implements ProductService {
     public void deleteProduct(Product product) {
         productDao.deleteProduct(product.getProductId());
     }
+
+    public List<Product> getProductsFromSearch(String name) {
+        return productDao.getProductsFromSearch(name);
+    }
+
+    public List<Product> getProductsFromCategory(String name) {
+        return productDao.getProductsFromCategory(name);
+    }
+
+    public List<Product> getProductsFromSubcategory(String name) {
+        return productDao.getProductsFromSubcategory(name);
+    }
 }

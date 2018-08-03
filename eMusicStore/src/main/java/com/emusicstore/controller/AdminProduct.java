@@ -32,9 +32,9 @@ public class AdminProduct {
     public String addProduct(Model model){
 
         Product product=new Product();
-        product.setProductCategory("instrument");
         product.setProductCondition("new");
         product.setProductStatus("active");
+        product.setProductSubCategory("no_cat");
 
         model.addAttribute("product", product);
         return "addProduct";

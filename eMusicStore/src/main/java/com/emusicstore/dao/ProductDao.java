@@ -15,5 +15,11 @@ public interface ProductDao {
 
     List<Product> getAllProducts();
 
+    List<Product> getProductsFromSearch(String name);
+
+    List<Product> getProductsFromCategory(String name);
+
+    List<Product> getProductsFromSubcategory(String name);
+
     void deleteProduct(int id);
 }

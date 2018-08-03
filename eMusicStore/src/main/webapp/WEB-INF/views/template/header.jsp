@@ -31,7 +31,13 @@
     <!-- Main CSS -->
     <link href="<c:url value="/resources/css/main.css" />" rel="stylesheet">
 
+    <%--JQuery--%>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 
+    <%--Data Tables--%>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+
+    <link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css" rel="stylesheet">
 
 </head>
 <!-- NAVBAR
@@ -55,9 +61,19 @@
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a href="<c:url value="/" /> ">Home</a></li>
-                        <li><a href="<c:url value="/product/productList" />">Products</a></li>
+                        <li><a href="<c:url value="/product/categories" />">Products</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
+                    <div class="col-md-3">
+                        <form action="/product/searchProduct" class="navbar-form" role="search">
+                            <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search.." name="search" style="width: 250px">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-default" type="submit" style="height: 34px;width: 34px"><i class="glyphicon glyphicon-search"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                     <ul class="nav navbar-nav pull-right">
                         <c:if test="${pageContext.request.userPrincipal.name!=null}">
                             <li><a>Welcome: ${pageContext.request.userPrincipal.name}</a></li>

@@ -49,6 +49,38 @@ public class ProductDaoImpl implements ProductDao {
         return productList;
     }
 
+    public List<Product> getProductsFromSearch(String name) {
+        Session session=sessionFactory.getCurrentSession();
+        Query query=session.createQuery("from Product where productName like ? or productDescription like ? or productSubcategory like ? or productCategory like ?");
+        query.setString(0, "%"+name+"%");
+        query.setString(1, "%"+name+"%");
+        query.setString(2, "%"+name+"%");
+        query.setString(3, "%"+name+"%");
+
+        List<Product> products=query.list();
+        session.flush();
+        return products;
+    }
+
+    public List<Product> getProductsFromCategory(String name) {
+        Session session=sessionFactory.getCurrentSession();
+        Query query=session.createQuery("from Product where productCategory like ?");
+        query.setString(0,"%"+name+"%");
+
+        List<Product> products=query.list();
+        session.flush();
+        return products;
+    }
+    public List<Product> getProductsFromSubcategory(String name) {
+        Session session=sessionFactory.getCurrentSession();
+        Query query=session.createQuery("from Product where productSubcategory like ?");
+        query.setString(0,"%"+name+"%");
+
+        List<Product> products=query.list();
+        session.flush();
+        return products;
+    }
+
     public void deleteProduct (int id) {
         Session session = sessionFactory.getCurrentSession();
         session.delete(getProductById(id));

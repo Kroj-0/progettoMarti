@@ -8,7 +8,18 @@
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@include file="/WEB-INF/views/template/header.jsp"%>
+<script>
+    //once loaded...
+    $(document).ready(function(){
 
+        //select table class inside document, to apply dataTables functions
+        var table= $('.table').DataTable({
+            "searching": false,
+            "info": false
+        });
+
+    });
+</script>
 
 <div class="container-wrapper">
     <div class="container">

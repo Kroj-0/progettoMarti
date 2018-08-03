@@ -2,6 +2,19 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@include file="/WEB-INF/views/template/header.jsp"%>
 
+<script>
+    //once loaded...
+    $(document).ready(function(){
+        var searchCondition='${searchCondition}';
+        //select table class inside document, to apply dataTables functions
+        var table= $('.table').DataTable({
+            "searching": false,
+            "info": false
+        });
+
+    });
+
+</script>
 
 <div class="container-wrapper">
     <div class="container">

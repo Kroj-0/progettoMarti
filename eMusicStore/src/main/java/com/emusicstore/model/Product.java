@@ -29,6 +29,7 @@ public class Product implements Serializable{
 
     private String productName;
     private String productCategory;
+    private String productSubCategory;
     private String productDescription;
 
     @Min(value = 0, message = "The product price must no be less then zero.")
@@ -148,8 +149,15 @@ public class Product implements Serializable{
         this.cartItemList = cartItemList;
     }
 
+    public String getProductSubCategory() {
+        return productSubCategory;
+    }
 
-//    public List<OrderDetail> getOrderDetails() {
+    public void setProductSubCategory(String productSubCategory) {
+        this.productSubCategory = productSubCategory;
+    }
+
+    //    public List<OrderDetail> getOrderDetails() {
 //        return orderDetails;
 //    }
 //
