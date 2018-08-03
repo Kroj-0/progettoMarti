@@ -12,6 +12,11 @@ Progetto Basi Dati Marti
 - cambiate le relazioni per semplificare gli ordini <strong>funzionante</strong>
 - date added to orders <strong>funzionante</strong>
 - Possibilità di visualizzare gli ordini effettuati e di marcarli come consegnati <strong>funzionante</strong>
+- pagina utente con ordini, dati utente e indirizzi, gli ultimi due modificabili, completata <strong>funzionante</strong>
+- all'utente non e' piu' possibile vedere prodotti inattivi o comprarli <strong>funzionante</strong>
+- aggiunte sotto categorie ai prodotti, e modificato tutte le pagine di editing/aggiunta dei prodotti <strong>funzionante</strong>
+- barra di ricerca aggiunta, che ricerca il campo inserito dall'utente su nome prodotto, categoria, sottocategoria e descrizione del prodotto <strong>funzionante</strong>
+- ora cliccando products si viene portati alla pagina delle categorie e sotto categorie, che linkano i prodotti per tali categorie/sottocategorie <strong>funzionante</strong>
 - DAO, controller e Servizi implementati totalmente per i punti sopra svolti
 
 # DA RIVEDERE?
@@ -25,7 +30,7 @@ Progetto Basi Dati Marti
 - <s>creazione ordine cliente</s>
 - <s>simulazione checkout</s>
 - <s> gestione ordini e clienti da parte dell'admin </s>
-- capacità di navigare il catalogo per marca, tipo, ricerca libera (uso di un plugin third party?)
+- <s>capacità di navigare il catalogo per marca, tipo, ricerca libera (uso di un plugin third party?)</s>
 - da richiesta gli admin dovrebbero poter gestire gli altri admin <em>(devo trovare un modo oltre alle autorita riconosciute dalla      spring security, che sono ROLE_USER E ROLE_ADMIN)</em>
 - Gestione di prodotti in push (per cui spingere la vendita) con inserimento in una “vetrina in home page” o in un area promo
   <em>La vetrina la ho, bisogna mettere le immagini con i relativi link ai prodotti ( o ad una categoria di prodotti)</em>
@@ -36,7 +41,7 @@ Progetto Basi Dati Marti
 - rework della grafica/testi
 
 # MIGLIORAMENTI NECESSARI/KNOWN ISSUES:
-- <strong>KNOWN ISSUE:</strong> ogni tanto il javascript che si occupa di gestire il carrello ritorna totali dei carrelli nulli
+- <s><strong>KNOWN ISSUE:</strong> ogni tanto il javascript che si occupa di gestire il carrello ritorna totali dei carrelli nulli</s>
 - sviluppare un modo per cambiare la quantita degli oggetti nel carrello, non solo rimuoverli in blocco, con un refresh automatico del    prezzo totale basato sulla quantita aggiornata a mano dall'utente
 - <s> cambiando l'url nella visione del carrello, risulta possibile accedere ai carrelli di altri utenti, poichè il formato dell'url risulta
                                           
