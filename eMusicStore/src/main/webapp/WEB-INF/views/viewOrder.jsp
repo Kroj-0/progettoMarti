@@ -46,7 +46,7 @@
                 <h5>${order.shippingAddress.streetName}, ${order.shippingAddress.aptNumber},
                     ${order.shippingAddress.city}, ${order.shippingAddress.state}, ${order.shippingAddress.cap}</h5>
                 <h4>Status</h4>
-                <h5>${order.status}</h5>
+                <h5>${order.tracking.trackingId.status}</h5>
             </div>
             <c:if test="${linkedOrders.get(0)!=null}">
             <div class="col-md-8 text-center">
@@ -61,6 +61,7 @@
                             <th>Quantity</th>
                             <th >Total</th>
                             <th>Status</th>
+                            <th>Tracking#</th>
                             <th>Details</th>
 
                         </tr>
@@ -71,7 +72,8 @@
                                 <td>${linkedOrders.customerOrderId.productId}</td>
                                 <td>${linkedOrders.quantity}</td>
                                 <td>${linkedOrders.total}</td>
-                                <td>${order.status}</td>
+                                <td>${linkedOrders.tracking.trackingId.status}</td>
+                                <td>${linkedOrders.tracking.trackingId.trackingId}</td>
                                 <td><a href="<c:url value="/admin/orders/viewOrder/${linkedOrders.customerOrderId.orderId}/${linkedOrders.product.productId}"/>" >
                                     <span class="glyphicon glyphicon-info-sign"></span></a></td>
                             </tr>
@@ -95,16 +97,17 @@
                         <form:hidden path="shippingAddress.shippingAddressId" value="${order.shippingAddress.shippingAddressId}" />
                         <form:hidden path="cart.cartId" value="${order.cart.cartId}" />
                         <form:hidden path="customer.customerId" value="${order.customer.customerId}" />
+                        <form:hidden path="tracking.trackingId.trackingId" value="${order.tracking.trackingId.trackingId}" />
                         <label for="st">Update order status         </label>
-                        <c:set var="state" value="${order.status}"></c:set>
-                        <c:set var="denied" value="cancelled"></c:set>
+                        <c:set var="state" value="${order.tracking.trackingId.status}"/>
+                        <c:set var="denied" value="cancelled"/>
                         <c:if test="${state.equals(denied)}">
-                            <form:select path="status" id="st" >
-                                <form:option value="Attuale: ${order.status}"/>
+                            <form:select path="tracking.trackingId.status" id="st" >
+                                <form:option value="Attuale: ${order.tracking.trackingId.status}"/>
                             </form:select>
                         </c:if>
                         <c:if test="${!state.equals(denied)}">
-                            <form:select path="status" id="st" >
+                            <form:select path="tracking.trackingId.status" id="st" >
                                 <form:option value="Attuale: ${order.status}"/>
                                 <form:options items="${status}"/>
                             </form:select>
@@ -142,17 +145,18 @@
                     <form:hidden path="shippingAddress.shippingAddressId" value="${order.shippingAddress.shippingAddressId}" />
                     <form:hidden path="cart.cartId" value="${order.cart.cartId}" />
                     <form:hidden path="customer.customerId" value="${order.customer.customerId}" />
+                    <form:hidden path="tracking.trackingId.trackingId" value="${order.tracking.trackingId.trackingId}" />
                     <label for="st">Update order status         </label>
-                    <c:set var="state" value="${order.status}"></c:set>
-                    <c:set var="denied" value="cancelled"></c:set>
+                    <c:set var="state" value="${order.tracking.trackingId.status}"/>
+                    <c:set var="denied" value="cancelled"/>
                     <c:if test="${state.equals(denied)}">
-                        <form:select path="status" id="st" >
-                            <form:option value="Attuale: ${order.status}"/>
+                        <form:select path="tracking.trackingId.status" id="st" >
+                            <form:option value="Attuale: ${order.tracking.trackingId.status}"/>
                         </form:select>
                     </c:if>
                     <c:if test="${!state.equals(denied)}">
-                        <form:select path="status" id="st" >
-                            <form:option value="Attuale: ${order.status}"/>
+                        <form:select path="tracking.trackingId.status" id="st" >
+                            <form:option value="Attuale: ${order.tracking.trackingId.status}"/>
                             <form:options items="${status}"/>
                         </form:select>
                     </c:if>

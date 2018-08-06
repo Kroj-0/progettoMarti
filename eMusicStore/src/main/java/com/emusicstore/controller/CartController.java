@@ -2,6 +2,7 @@ package com.emusicstore.controller;
 
 
 import com.emusicstore.model.Customer;
+import com.emusicstore.service.CartService;
 import com.emusicstore.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
@@ -22,6 +23,9 @@ public class CartController {
     @Autowired
     private CustomerService customerService;
 
+    @Autowired
+    private CartService cartService;
+
     //@AuthenticationPrincipal prende l'utente logato e ne prende le info
     @RequestMapping
     public String getCart(@AuthenticationPrincipal User activeUser, RedirectAttributes redirect){
@@ -38,8 +42,8 @@ public class CartController {
     }
 
     @RequestMapping("/myCart")
-    public String getCartRedirect(Model model, @ModelAttribute("cartIdRefresh") Object cartId){
-        model.addAttribute("cartId", cartId);
+    public String getCartRedirect(Model model, @ModelAttribute("cartIdRefresh") int cartId){
+        model.addAttribute("cart", cartService.getCartById(cartId));
 
         return "cart";
     }

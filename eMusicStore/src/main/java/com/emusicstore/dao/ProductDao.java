@@ -15,11 +15,13 @@ public interface ProductDao {
 
     List<Product> getAllProducts();
 
-    List<Product> getProductsFromSearch(String name);
+    List<Product> getPromoProducts();
 
-    List<Product> getProductsFromCategory(String name);
+    List<Product> getProductsFromSearch(String name, String order);
 
-    List<Product> getProductsFromSubcategory(String name);
+    List<Product> getProductsFromCategory(String name, String order);
+
+    List<Product> getProductsFromSubcategory(String name, String order);
 
     void deleteProduct(int id);
 }

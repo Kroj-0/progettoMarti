@@ -95,7 +95,7 @@
                                 <td>${customerOrders.total} USD</td>
                                 <td>${customerOrders.shippingAddress.streetName}, ${customerOrders.shippingAddress.city},
                                         ${customerOrders.shippingAddress.state}</td>
-                                <td>${customerOrders.status}</td>
+                                <td>${customerOrders.tracking.trackingId.status}</td>
                                 <td><a href="<c:url value="/admin/orders/viewOrder/${customerOrders.customerOrderId.orderId}/${customerOrders.product.productId}" />"
                                 ><span class="glyphicon glyphicon-info-sign"></span></a></td>
                             </tr>

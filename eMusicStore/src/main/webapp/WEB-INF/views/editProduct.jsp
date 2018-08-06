@@ -104,6 +104,8 @@
                                                              value="new" />New</label>
             <label class="checkbox-inline"><form:radiobutton path="productCondition" id="condition"
                                                              value="used" />Used</label>
+            <label class="checkbox-inline"><form:radiobutton path="productCondition" id="condition"
+                                                             value="promo" />Promo</label>
         </div>
 
         <div class="form-group">

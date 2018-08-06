@@ -57,7 +57,7 @@
                     <td>${customerOrder.date}</td>
                     <td >${customerOrder.shippingAddress.streetName}, ${customerOrder.shippingAddress.aptNumber},
                         ${customerOrder.shippingAddress.city}, ${customerOrder.shippingAddress.state}, ${customerOrder.shippingAddress.cap}</td>
-                    <td>${customerOrder.status}</td>
+                    <td>${customerOrder.tracking.trackingId.status}</td>
                     <td><a href="<c:url value="/admin/orders/viewOrder/${customerOrder.customerOrderId.orderId}/${customerOrder.product.productId}"/>" >
                         <span class="glyphicon glyphicon-info-sign"></span></a></td>
                 </tr>

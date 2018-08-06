@@ -55,9 +55,12 @@ public class CustomerOrderServiceImpl implements CustomerOrderService{
         return customerOrderDao.getLinkedOrders(customerOrder);
     }
 
-    public void changeStatus(CustomerOrder customerOrder) {
-        customerOrderDao.changeStatus(customerOrder);
+    public void update(CustomerOrder customerOrder) {
+        customerOrderDao.update(customerOrder);
     }
 
+    public CustomerOrder getFromTracking(String trackingId) {
+        return customerOrderDao.getFromTracking(trackingId);
+    }
 
 }

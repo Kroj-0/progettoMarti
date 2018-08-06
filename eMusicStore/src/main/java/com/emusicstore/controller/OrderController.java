@@ -2,13 +2,12 @@ package com.emusicstore.controller;
 
 import com.emusicstore.model.*;
 //import com.emusicstore.model.OrderDetail;
-import com.emusicstore.service.CartService;
-import com.emusicstore.service.CustomerOrderService;
+import com.emusicstore.service.*;
 //import com.emusicstore.service.OrderDetailService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
 import java.util.List;
@@ -22,11 +21,32 @@ public class OrderController {
     @Autowired
     private CustomerOrderService customerOrderService;
 
-    @RequestMapping("/order/{cartId}")
-    public String createOrder(@PathVariable("cartId") int cartId){
+    @Autowired
+    private CustomerService customerService;
 
+    @Autowired
+    private CartItemService cartItemService;
+
+    @Autowired
+    private ProductService productService;
+
+    @Autowired
+    private TrackingService trackingService;
+
+    @RequestMapping("/order/{cartId}")
+    public  String goToCheckout(@PathVariable("cartId") int cartId){
+
+        return "redirect:/checkout?cartId="+cartId;
+    }
+    @RequestMapping("/checkout-ended")
+    public String createOrder() {
+
+        final String currentUserName = SecurityContextHolder.getContext().getAuthentication().getName();
+        System.out.println(">>>>>> username from jsessionid= " + currentUserName);
+
+        Customer customer=customerService.getCustomerByUsername(currentUserName);
         CustomerOrder customerOrder=new CustomerOrder();
-        Cart cart=cartService.getCartById(cartId);
+        Cart cart=cartService.getCartById(customer.getCart().getCartId());
         List<CartItem> cartItemList=cart.getCartItems();
         Date date=new Date();
         int OrderId=customerOrderService.getLastOrderId();
@@ -37,7 +57,6 @@ public class OrderController {
             CustomerOrderId customerOrderId= new CustomerOrderId(OrderId,cartItemList.get(i).getProduct().getProductId());
 
             customerOrder.setCart(cart);
-            Customer customer=cart.getCustomer();
             customerOrder.setCustomer(customer);
 
             System.out.println(">>>>inserisco "+customerOrder.getCustomer());
@@ -53,13 +72,27 @@ public class OrderController {
             System.out.println(">>>>inserisco il totale "+cartItemList.get(i).getTotal());
             customerOrder.setTotal(cartItemList.get(i).getTotal());
 
+            // setto il tracking
             customerOrder.setDate(date);
-            customerOrder.setStatus("confirmed");
-            System.out.println(">>>>inserisco lo stato "+customerOrder.getStatus());
+            String trId=trackingService.setTracking(customer.getShippingAddress().getShippingAddressId());
+            TrackingId trackingId=new TrackingId(trId,"confirmed");
+            Tracking tracking=new Tracking(trackingId, date);
+            trackingService.addTracking(tracking);
+
+            customerOrder.setTracking(tracking);
             customerOrderService.addCustomerOrder(customerOrder);
             System.out.println(">>>>>Devo farlo "+cartItemList.size()+" volte");
-        }
 
-        return "redirect:/checkout?cartId="+cartId;
+            //elimino la quantita comprata dallo stock
+            int ordered=cartItemList.get(i).getQuantity();
+            Product product=productService.getProductById(cartItemList.get(i).getProduct().getProductId());
+            int updateUIS=product.getUnitInStock()-ordered;
+            System.out.println(">>>>> old UIS = "+product.getUnitInStock()+" new UIS = "+updateUIS);
+            product.setUnitInStock(updateUIS);
+            productService.editProduct(product);
+
+        }
+        cartItemService.clearCart(customer.getCart());
+        return "redirect:/";
     }
 }

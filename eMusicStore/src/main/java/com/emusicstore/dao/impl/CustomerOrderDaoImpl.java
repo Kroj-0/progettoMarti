@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Random;
 
 @Repository
 @Transactional
@@ -29,8 +30,15 @@ public class CustomerOrderDaoImpl implements CustomerOrderDao {
         Session session=sessionFactory.getCurrentSession();
         Query query=session.createQuery("select distinct max(cast(OrderId as int)) from CustomerOrder");
         session.flush();
-        int lastOrderId=(Integer) query.uniqueResult();
-        return  lastOrderId;
+        if(query.uniqueResult()==null){
+            int firstOrderId=0;
+            return firstOrderId;
+        }
+        else{
+            int lastOrderId=(Integer) query.uniqueResult();
+            return  lastOrderId;
+        }
+
     }
 
     public List<CustomerOrder> getAllOrders() {
@@ -74,12 +82,20 @@ public class CustomerOrderDaoImpl implements CustomerOrderDao {
         return customerOrder;
     }
 
-    public void changeStatus(CustomerOrder customerOrder) {
+    public void update(CustomerOrder customerOrder) {
         Session session=sessionFactory.getCurrentSession();
         session.saveOrUpdate(customerOrder);
         session.flush();
 
     }
 
+    public CustomerOrder getFromTracking(String trackingId) {
+        Session session=sessionFactory.getCurrentSession();
+        Query query=session.createQuery("from CustomerOrder where trackingId = ?");
+        query.setString(0, trackingId);
+        CustomerOrder customerOrder=(CustomerOrder)query.uniqueResult();
+        session.flush();
+        return customerOrder;
+    }
 
 }

@@ -75,9 +75,10 @@ public class CartREST {
 
     @RequestMapping(value = "/remove/{productId}", method = RequestMethod.PUT)
     @ResponseStatus(value=HttpStatus.OK)
-    public void removeItem(@PathVariable(value="productId") int productId){
+    public void removeItem(@PathVariable(value="productId") int productId, @AuthenticationPrincipal User activeUser){
 
-        CartItem cartItem=cartItemService.getCartItemByProductId(productId);
+        int cartId=cartService.getCartById(customerService.getCustomerByUsername(activeUser.getUsername()).getCart().getCartId()).getCartId();
+        CartItem cartItem=cartItemService.getCartItemByProductId(productId, cartId);
 
         cartItemService.removeCartItem(cartItem);
     }
@@ -88,6 +89,28 @@ public class CartREST {
 
         Cart cart =cartService.getCartById(cartId);
         cartItemService.clearCart(cart);
+    }
+
+    @RequestMapping(value = "/update/{productId}/{quantity}", method = RequestMethod.PUT)
+    @ResponseStatus(value=HttpStatus.NO_CONTENT)
+    public void updateItem(@PathVariable(value="productId") int productId, @PathVariable(value="quantity") int quantity,
+                           @AuthenticationPrincipal User activeUser){
+        int cartId=cartService.getCartById(customerService.getCustomerByUsername(activeUser.getUsername()).getCart().getCartId()).getCartId();
+
+        CartItem cartItem=cartItemService.getCartItemByProductId(productId, cartId);
+        cartItem.setQuantity(quantity);
+        cartItem.setTotal(cartItem.getProduct().getProductPrice()*cartItem.getQuantity());
+        cartItemService.updateCartItemQuantity(cartItem);
+    }
+
+    @RequestMapping(value = "/validate/{quantity}/{productId}", method = RequestMethod.GET)
+    public @ResponseBody String validateItemQuantity(@PathVariable("quantity") int quantity ,@PathVariable("productId") int productId){
+
+        Product product=productService.getProductById(productId);
+        if(quantity<=product.getUnitInStock()){
+            return "true";
+        }
+        else return "false";
     }
 
     @ExceptionHandler(IllegalArgumentException.class)

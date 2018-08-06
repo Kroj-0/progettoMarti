@@ -8,6 +8,6 @@ public interface CartItemService {
     void addCartItem(CartItem cartItem);
     void removeCartItem(CartItem cartItem);
     void clearCart(Cart cart);
-    CartItem getCartItemByProductId(int productId);
-
+    CartItem getCartItemByProductId(int productId, int cartId);
+    void updateCartItemQuantity(CartItem cartItem);
 }

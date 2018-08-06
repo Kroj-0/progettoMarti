@@ -20,10 +20,10 @@
         </section>
 
         <section class="container" ng-controller="cartCtrl" ng-app="cartApp">
-            <div  ng-init="initCartId('${cartId}')">
+            <div  ng-init="initCartId('${cart.cartId}')" >
             <div>
                 <a class="btn btn-danger pull-left" ng-click="clearCart()"><span class="glyphicon-remove-sign"></span>Clear cart</a>
-                <a href="<c:url value="/order/${cartId}"/>" class="btn btn-success pull-right"><span
+                <a href="<c:url value="/order/${cart.cartId}"/>" class="btn btn-success pull-right"><span
                         class="glyphicon glyphicon-shopping-cart">Checkout</span></a>
             </div>
 
@@ -32,18 +32,26 @@
                     <th>Product</th>
                     <th>Unit Price</th>
                     <th>Quantity</th>
+                    <th></th>
                     <th>Total</th>
                     <th>Action</th>
                 </tr>
-                <tr ng-repeat="item in cart.cartItems">
+                <tr ng-repeat="item in cart.cartItems" ng-init="initQuantity('${item.quantity}')">
                     <td>{{item.product.productName}}</td>
                     <td>{{item.product.productPrice}}</td>
                     <td>{{item.quantity}}</td>
+                    <td>
+                        <a class="button" ng-click="increaseQuantity(item.quantity, item.product.productId)">
+                            <span class="glyphicon glyphicon-plus-sign"></span></a>
+                        <a class="button" ng-click="decreaseQuantity(item.quantity, item.product.productId)">
+                            <span class="glyphicon glyphicon-minus-sign"></span></a>
+                    </td>
                     <td>{{item.total}}</td>
                     <td><a hfer="#" class="label label-danger" ng-click="removeFromCart(item.product.productId)">
                         <span class="glyphicon glyphicon-remove"></span>Remove</a></td>
                 </tr>
                 <tr>
+                    <th></th>
                     <th></th>
                     <th></th>
                     <th>Total</th>

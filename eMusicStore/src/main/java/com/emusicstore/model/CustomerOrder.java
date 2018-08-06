@@ -1,11 +1,15 @@
 package com.emusicstore.model;
 
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name="customer_order")
@@ -45,10 +49,13 @@ public class CustomerOrder implements Serializable{
     @JoinColumn(name="shippingAddressId")
     private ShippingAddress shippingAddress;
 
-    private String status;
-
-//    @OneToMany(mappedBy ="customerOrder" , cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-//    private List<OrderDetail> orderDetails;
+    @ManyToOne
+    @JoinColumns({
+            @JoinColumn(name = "status", nullable=false),
+            @JoinColumn(name = "trackingId", nullable=false)
+    })
+    @NotNull
+    public Tracking tracking;
 
 
     public CustomerOrderId getCustomerOrderId() {
@@ -131,11 +138,11 @@ public class CustomerOrder implements Serializable{
         this.date = date;
     }
 
-    public String getStatus() {
-        return status;
+    public Tracking getTracking() {
+        return tracking;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setTracking(Tracking tracking) {
+        this.tracking = tracking;
     }
 }

@@ -14,7 +14,7 @@
         <section>
             <div class="jumbotron">
                 <div class="container">
-                    <h1>CThanks for your order!</h1>
+                    <h1>Thanks for your order!</h1>
                     <P>Your order will be shipped in two business days.</P>
                 </div>
             </div>
@@ -22,7 +22,7 @@
 
         <section class="container" >
             <p>
-                <a href="<spring:url value="/"/>" class="btn btn-default">OK</a>
+                <a href="<spring:url value="/checkout-ended"/>" class="btn btn-default">OK</a>
             </p>
         </section>
 

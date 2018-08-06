@@ -17,7 +17,7 @@ public interface CustomerOrderDao {
 
     List<CustomerOrder> getLinkedOrders(CustomerOrder customerOrder);
 
-    void changeStatus(CustomerOrder customerOrder);
+    void update(CustomerOrder customerOrder);
 
-
+    CustomerOrder getFromTracking(String trackingId);
 }

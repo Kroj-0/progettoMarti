@@ -15,9 +15,9 @@
         <div class="page-header">
             <h1>Your Addresses </h1>
         </div>
-        <div class="row" style="margin-bottom: 20px;border: 2px green">
+        <div class="row" style="margin-bottom: 20px;border: 2px green;">
             <c:if test="${msg != null}">
-            <div class="col-md-1" style="height: 55px">
+            <div class="col-md-1 col-md-offset-4" style="height: 55px">
                 <div class="glyphicon glyphicon-ok" style="font-size: 50px"></div>
             </div>
             <div class="col-md-6 " style="height: 55px; text-align: middle">
@@ -51,7 +51,7 @@
                 </div>
                 <div class="col-md-2">
                 </div>
-                <li class="col-md-6" >
+                <div class="col-md-6" style="margin-top: 19px" >
                     <div class="row">
                         <h3>Shipping Addresses</h3>
                     </div>

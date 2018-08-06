@@ -1,5 +1,7 @@
 package com.emusicstore.controller;
 
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,7 +24,13 @@ public class HomeController {
         if(logout!=null){
             model.addAttribute("msg", "Logged out succesfully");
         }
-
+        User user=(User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        System.out.println(">>>>> user ");
         return "login";
+    }
+
+    @RequestMapping("/about")
+    public String about(){
+        return "about";
     }
 }

@@ -25,7 +25,11 @@ public class CartItemServiceImpl implements CartItemService {
         cartItemDao.clearCart(cart);
     }
 
-    public CartItem getCartItemByProductId(int productId) {
-        return cartItemDao.getCartItemByProductId(productId);
+    public CartItem getCartItemByProductId(int productId, int cartId) {
+        return cartItemDao.getCartItemByProductId(productId, cartId);
+    }
+
+    public void updateCartItemQuantity(CartItem cartItem) {
+        cartItemDao.updateCartItemQuantity(cartItem);
     }
 }

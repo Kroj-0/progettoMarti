@@ -39,12 +39,19 @@ public class CartItemDaoImpl implements CartItemDao {
             removeCartItem(cartItem);
         }
     }
-    public CartItem getCartItemByProductId(int productId){
+    public CartItem getCartItemByProductId(int productId, int cartId){
 
         Session session=sessionFactory.getCurrentSession();
-        Query query=session.createQuery("from CartItem where productId = ?");
+        Query query=session.createQuery("from CartItem where productId = ? and cartId = ?");
         query.setInteger(0, productId);
+        query.setInteger(1, cartId);
 
         return (CartItem) query.uniqueResult();
+    }
+
+    public void updateCartItemQuantity(CartItem cartItem){
+        Session session=sessionFactory.getCurrentSession();
+        session.saveOrUpdate(cartItem);
+        session.flush();
     }
 }

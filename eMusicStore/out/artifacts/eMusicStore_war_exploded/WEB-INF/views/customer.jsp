@@ -24,8 +24,7 @@
             <ul class="list-group">
                 <li class="list-group-item clearfix">
 
-                <a href="<c:url value="/customer/myOrders" />"
-                   onclick="setCookie('user','${pageContext.request.userPrincipal.name}',1,'/')">
+                <a href="<c:url value="/customer/myOrders" />">
                 <div class="row">
                     <div class="container">
                     <h3>
@@ -37,8 +36,7 @@
                 </a>
                 </li>
                 <li class="list-group-item clearfix">
-                <a href="<c:url value="/customer/myDetails" />"
-                   onclick="setCookie('user','${pageContext.request.userPrincipal.name}',1,'/')">
+                <a href="<c:url value="/customer/myDetails" />">
                 <div class="row">
                 <div class="container">
                     <h3>
@@ -50,9 +48,7 @@
                 </a>
                 </li>
                 <li class="list-group-item clearfix">
-                <a href="<c:url value="/customer/myAddresses" />"
-
-                   onclick="setCookie('user','${pageContext.request.userPrincipal.name}',1,'/')">
+                <a href="<c:url value="/customer/myAddresses" />">
                 <div class="row">
                     <div class="container">
                     <h3>

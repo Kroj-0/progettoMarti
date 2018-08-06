@@ -30,7 +30,7 @@
                         <c:forEach items="${orders}" var="customerOrder">
                             <c:set var="cancelled" value="cancelled"/>
                             <c:set var="received" value="received"/>
-                            <c:if test="${customerOrder.status==cancelled}">
+                            <c:if test="${customerOrder.tracking.trackingId.status==cancelled}">
                                 <span style="color: red; font-size: x-large">Order was cancelled, please contact support</span>
                             </c:if>
                             <li class="list-group-item clearfix" style="background-color: gainsboro">
@@ -49,7 +49,7 @@
                                 </div>
                                 <div class="col-md-2">
                                     <strong>Order status:</strong><br>
-                                    <p style="color: red;text-align: right">${customerOrder.status}</p>
+                                    <p style="color: red;text-align: right">${customerOrder.tracking.trackingId.status}</p>
                                 </div>
                             </li>
                         <li class="list-group-item clearfix">
@@ -72,7 +72,7 @@
                                     </div>
                                 <div class="col-md-4"  >
                                     <c:choose>
-                                        <c:when test="${customerOrder.status==cancelled || customerOrder.status==received}">
+                                        <c:when test="${customerOrder.tracking.trackingId.status==cancelled || customerOrder.tracking.trackingId.status==received}">
                                             <div class="row">
                                                 <a href="<c:url value="/customer"/>" class="btn btn-default " style="margin-top:37px;width: 200px" >Contact support</a>
                                             </div>
@@ -82,7 +82,7 @@
                                             </div>
                                         </c:when>
                                         <c:otherwise><div class="row">
-                                            <a href="<c:url value="/customer"/>" class="btn btn-default  " style="margin-top:23px;width: 200px"  >Track your shipment</a>
+                                            <a href="<c:url value="/customer/myOrders/tracking/${customerOrder.tracking.trackingId.trackingId}"/>" class="btn btn-default  " style="margin-top:23px;width: 200px"  >Track your shipment</a>
                                         </div>
 
                                             <div class="row" >

@@ -13,7 +13,7 @@
     <div class="container">
         <div class="container">
             <div class="col-md-30">
-                <a href="<c:url value="/customer/"/>" class="btn btn-default pull-left" >Back to Detail list</a>
+                <a href="<c:url value="/customer"/>" class="btn btn-default pull-left" >Back to My Account</a>
             </div>
         </div>
         <div class="container">

@@ -13,6 +13,6 @@ public interface CustomerOrderService {
     List<CustomerOrder> getOrdersByCustomerId(int customerId);
     CustomerOrder getOrdersByKey(int productId, int orderId);
     List<CustomerOrder> getLinkedOrders(CustomerOrder customerOrder);
-    void changeStatus(CustomerOrder customerOrder);
-
+    void update(CustomerOrder customerOrder);
+    CustomerOrder getFromTracking(String trackingId);
 }

@@ -62,7 +62,7 @@
                     <ul class="nav navbar-nav">
                         <li><a href="<c:url value="/" /> ">Home</a></li>
                         <li><a href="<c:url value="/product/categories" />">Products</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="<c:url value="/about"/> ">About Us</a></li>
                     </ul>
                     <div class="col-md-3">
                         <form action="/product/searchProduct" class="navbar-form" role="search">
@@ -78,11 +78,11 @@
                         <c:if test="${pageContext.request.userPrincipal.name!=null}">
                             <li><a>Welcome: ${pageContext.request.userPrincipal.name}</a></li>
                             <li><a href="<c:url value="/j_spring_security_logout" />" onclick="eraseCookie('getCookie(\'user\')')">Logout</a></li>
-                            <c:if test="${pageContext.request.userPrincipal.name != 'admin'}">
+                            <c:if test="${pageContext.request.isUserInRole('ROLE_USER')}">
                                 <li><a href="<c:url value="/customer/cart" />">Cart</a></li>
                                 <li><a href="<c:url value="/customer" />">My Account</a></li>
                             </c:if>
-                            <c:if test="${pageContext.request.userPrincipal.name == 'admin'}">
+                            <c:if test="${pageContext.request.isUserInRole('ROLE_ADMIN')}">
                                 <li><a href="<c:url value="/admin" />">Admin</a></li>
                             </c:if>
                         </c:if>

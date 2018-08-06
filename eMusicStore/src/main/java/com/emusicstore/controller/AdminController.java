@@ -1,11 +1,10 @@
 package com.emusicstore.controller;
 
-import com.emusicstore.model.Customer;
-import com.emusicstore.model.CustomerOrder;
-import com.emusicstore.model.Product;
+import com.emusicstore.model.*;
 import com.emusicstore.service.CustomerOrderService;
 import com.emusicstore.service.CustomerService;
 import com.emusicstore.service.ProductService;
+import com.emusicstore.service.TrackingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
@@ -37,6 +36,8 @@ public class AdminController {
     private CustomerService customerService;
     @Autowired
     private CustomerOrderService customerOrderService;
+    @Autowired
+    private TrackingService trackingService;
 
     @InitBinder
     public void initBinder(WebDataBinder webDataBinder) {
@@ -46,29 +47,30 @@ public class AdminController {
     }
 
     @RequestMapping
-    public  String adminPage(){
+    public String adminPage() {
         return "admin";
     }
+
     @RequestMapping("/productInventory")
-    public String productInventory(Model model){
+    public String productInventory(Model model) {
 
         List<Product> products = productService.getAllProducts();
-        model.addAttribute("products",products);
+        model.addAttribute("products", products);
         return "productInventory";
     }
 
     @RequestMapping("/users")
-    public  String customerManagement(Model model){
+    public String customerManagement(Model model) {
 
-        List<Customer> customerList=customerService.getCustomerList();
+        List<Customer> customerList = customerService.getCustomerList();
         model.addAttribute("customerList", customerList);
         return "customerManagement";
     }
 
     @RequestMapping("/users/viewCustomer/{customerId}")
     public String viewCustomer(@PathVariable("customerId") int customerId, Model model) throws IOException {
-        Customer customer=customerService.getCustomerById(customerId);
-        List<CustomerOrder> customerOrders=customerOrderService.getOrdersByCustomerId(customerId);
+        Customer customer = customerService.getCustomerById(customerId);
+        List<CustomerOrder> customerOrders = customerOrderService.getOrdersByCustomerId(customerId);
 
         model.addAttribute("orders", customerOrders);
         model.addAttribute("customer", customer);
@@ -76,33 +78,33 @@ public class AdminController {
         return "viewCustomer";
     }
 
-    @RequestMapping(value="/users/editCustomer", method = RequestMethod.POST)
+    @RequestMapping(value = "/users/editCustomer", method = RequestMethod.POST)
     public String editCustomerPost(@Valid @ModelAttribute("customer") Customer customer, BindingResult result) {
         System.out.println(">>>>>>>>>>>>>>>>sono entrato nel metodo post");
-        if(result.hasErrors()){
+        if (result.hasErrors()) {
             return "viewCustomer";
         }
 
         System.out.println(">>>>>>>>>>>>>>>>prima della modifica");
         customerService.editEnable(customer);
-        System.out.println(">>>>>>>>>>>>>>>>dopo la modifica"+customer.isEnabled());
+        System.out.println(">>>>>>>>>>>>>>>>dopo la modifica" + customer.isEnabled());
 
         return "redirect:/admin/users/viewCustomer/" + customer.getCustomerId();
     }
 
     @RequestMapping("/orders")
-    public String viewAllOrders(Model model){
-        List<CustomerOrder> orders=customerOrderService.getAllOrders();
+    public String viewAllOrders(Model model) {
+        List<CustomerOrder> orders = customerOrderService.getAllOrders();
         model.addAttribute("orders", orders);
         return "orderList";
     }
 
     @RequestMapping("/orders/viewOrder/{orderId}/{productId}")
-    public String viewOrderDetail(@PathVariable("orderId") int orderId, @PathVariable("productId") int productId, RedirectAttributes redirect){
+    public String viewOrderDetail(@PathVariable("orderId") int orderId, @PathVariable("productId") int productId, RedirectAttributes redirect) {
 
-        System.out.println(">>>>>>>>>>>>>>>>orderId "+ orderId);
-        CustomerOrder customerOrder=customerOrderService.getOrdersByKey(productId,orderId);
-        if(!redirect.containsAttribute("refreshCO")){
+        System.out.println(">>>>>>>>>>>>>>>>orderId " + orderId);
+        CustomerOrder customerOrder = customerOrderService.getOrdersByKey(productId, orderId);
+        if (!redirect.containsAttribute("refreshCO")) {
             redirect.addFlashAttribute("refreshCO", customerOrder);
         }
 
@@ -110,23 +112,23 @@ public class AdminController {
     }
 
     @RequestMapping("/orders/viewOrder/orderDetails")
-    public  String prettyUrlViewOrderDetail(Model model, @ModelAttribute("refreshCO") CustomerOrder customerOrder, BindingResult result)
-    {
+    public String prettyUrlViewOrderDetail(Model model, @ModelAttribute("refreshCO") CustomerOrder customerOrder, BindingResult result) {
 //        if(result.hasErrors()){
 //            model.addAttribute("error", "Unexpected error, please try to access data again");
 //            return "redirect:/admin/orders";
 //        }
 
-        List<CustomerOrder> linkedOrders=customerOrderService.getLinkedOrders(customerOrder);
-        System.out.println(">>>>>>>>>>>>>> elementi della lista "+linkedOrders.size());
-        if(linkedOrders.isEmpty()){
+        List<CustomerOrder> linkedOrders = customerOrderService.getLinkedOrders(customerOrder);
+        System.out.println(">>>>>>>>>>>>>> elementi della lista " + linkedOrders.size());
+        if (linkedOrders.isEmpty()) {
             linkedOrders.add(0, null);
             System.out.println(">>>>>>>>>>>>a quanto pare la lista era vuota -->> ordine univoco");
         }
-        Map<String,String> status = new HashMap<String, String>();
+        Map<String, String> status = new HashMap<String, String>();
         status.put("confirmed", "confirmed");
-        status.put("preparato", "preparato");
+        status.put("prep4shipping", "prepaired");
         status.put("shipped", "shipped");
+        status.put("transit", "transit");
         status.put("received", "received");
         model.addAttribute("status", status);
         model.addAttribute("order", customerOrder);
@@ -136,12 +138,17 @@ public class AdminController {
 
     @RequestMapping(value="/orders/orderDetail/editStatus", method = RequestMethod.POST)
     public String editOrderStatusPost(@Valid @ModelAttribute("order") CustomerOrder customerOrder, BindingResult result) {
-        System.out.println(">>>>>> sono in /orders/orderDetail/editStatus");
+
         if(result.hasErrors()){
             return "viewOrder";
         }
-        System.out.println(">>>>>> ho passato il controllo di form");
-        customerOrderService.changeStatus(customerOrder);
+
+        TrackingId trId=new TrackingId(customerOrder.getTracking().getTrackingId().getTrackingId(), customerOrder.getTracking().getTrackingId().getStatus());
+        Tracking tracking=new Tracking(trId, new Date());
+        customerOrder.setTracking(tracking);
+
+        trackingService.addTracking(tracking);
+        customerOrderService.update(customerOrder);
         String redirect = "/admin/orders/viewOrder/" + customerOrder.getCustomerOrderId().getOrderId()
                 + "/" + customerOrder.getCustomerOrderId().getProductId();
         return "redirect:" + redirect;
@@ -151,8 +158,12 @@ public class AdminController {
     public String deleteOrder(@PathVariable("orderId") int orderId, @PathVariable("productId") int productId){
 
         CustomerOrder customerOrder=customerOrderService.getOrdersByKey(productId,orderId);
-        customerOrder.setStatus("cancelled");
-        customerOrderService.changeStatus(customerOrder);
+
+        TrackingId trId=new TrackingId(customerOrder.getTracking().getTrackingId().getTrackingId(), "cancelled");
+        Tracking tracking=new Tracking(trId, new Date());
+        customerOrder.setTracking(tracking);
+        trackingService.addTracking(tracking);
+        customerOrderService.update(customerOrder);
 
         return "redirect:/admin/orders";
     }

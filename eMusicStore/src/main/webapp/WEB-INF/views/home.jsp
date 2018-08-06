@@ -14,7 +14,7 @@
     <div class="carousel-inner" role="listbox">
         <div class="item active">
             <img class="first-slide home-image"
-                 src="<c:url value="/resources/images/back1.jpg" />"
+                 src="<c:url value="/resources/images/vet1.jpg" />"
                  alt="First slide">
 
             <div class="container">
@@ -29,32 +29,30 @@
         </div>
         <div class="item">
             <img class="second-slide home-image"
-                 src="<c:url value="/resources/images/back2.jpg" />"
+                 src="<c:url value="/resources/images/vet2.jpg" />"
                  alt="Second slide">
 
             <div class="container">
                 <div class="carousel-caption">
-                    <h1>Facts You Should Know About Music</h1>
 
-                    <p>Music brings joy, to all of our hearts, It's one of those, emotional arts.</p>
 
                 </div>
             </div>
         </div>
-        <div class="item">
-            <img class="third-slide home-image"
-                 src="<c:url value="/resources/images/back3.jpg" />"
-                 alt="Third slide">
 
+        <div class="item">
+            <a href="<c:url value="/product/promo"/>">
+            <img class="third-slide home-image"
+                 src="<c:url value="/resources/images/vet3.jpg" />"
+                 alt="Third slide">
+            </a>
             <div class="container">
                 <div class="carousel-caption">
-                    <h1>It's A Jazz Affair</h1>
-
-                    <p>Through ups and downs, Somehow I manage to survive in life.</p>
 
                 </div>
             </div>
         </div>
+
     </div>
     <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -77,21 +75,21 @@
     <!-- Three columns of text below the carousel -->
     <div class="row">
         <div class="col-lg-4">
-            <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-            <h2>Heading</h2>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            <img class="img-circle" src="<c:url value="/resources/images/shipping.jpg" />" alt="Generic placeholder image" width="140" height="140">
+            <h2>Shipping</h2>
+            <p>Fast worldwide shipping.</p>
+            <%--<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>--%>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-            <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-            <h2>Heading</h2>
-            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            <img class="img-circle" src="<c:url value="/resources/images/visa.png" />" alt="Generic placeholder image" width="140" height="140">
+            <h2>Payment</h2>
+            <p>We support the most popular payment methods.</p>
+            <%--<p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>--%>
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-            <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-            <h2>Heading</h2>
-            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            <img class="img-circle" src="<c:url value="/resources/images/faq.png" />" alt="Generic placeholder image" width="140" height="140">
+            <h2>FAQ</h2>
+            <p>All the help you need.</p>
             <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
     </div><!-- /.row -->
