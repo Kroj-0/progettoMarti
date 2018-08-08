@@ -22,7 +22,8 @@ Progetto Basi Dati Marti<strong>COMPLETED!!!</strong>
 - OPZIONALE: gestione tracking completata <strong>funzionante</strong>
 - added faq page <strong>funzionante</strong>
 - added password encoding <strong>funzionante</strong>
-- DAO, controller e Servizi implementati totalmente per i punti sopra svolti
+- added email sending for registration and order placement <strong>funzionante</strong>
+- DAO, controller e Servizi implementati totalmente per i punti sopra svolti <strong>funzionante</strong>
 
 # DA RIVEDERE?
 - <s>forse è meglio non mettere le password in chiaro nel db<s>
