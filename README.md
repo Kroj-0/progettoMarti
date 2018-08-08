@@ -26,7 +26,7 @@ Progetto Basi Dati Marti<strong>COMPLETED!!!</strong>
 - DAO, controller e Servizi implementati totalmente per i punti sopra svolti <strong>funzionante</strong>
 
 # DA RIVEDERE?
-- <s>forse è meglio non mettere le password in chiaro nel db<s>
+- <s>forse è meglio non mettere le password in chiaro nel db</s>
 - 
 
 # TO DO:
