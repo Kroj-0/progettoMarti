@@ -1,5 +1,5 @@
 # progettoMarti
-Progetto Basi Dati Marti
+Progetto Basi Dati Marti<strong>COMPLETED!!!</strong>
 
 # DONE:
 - model definitivi
@@ -20,10 +20,12 @@ Progetto Basi Dati Marti
 - vetrina e area promo completate <strong>funzionante</strong>
 - gestione quantita prodotti in stock in seguito ad acquisto, all'acquisto e nel carrello completata <strong>funzionante</strong>
 - OPZIONALE: gestione tracking completata <strong>funzionante</strong>
+- added faq page <strong>funzionante</strong>
+- added password encoding <strong>funzionante</strong>
 - DAO, controller e Servizi implementati totalmente per i punti sopra svolti
 
 # DA RIVEDERE?
-- forse è meglio non mettere le password in chiaro nel db
+- <s>forse è meglio non mettere le password in chiaro nel db<s>
 - 
 
 # TO DO:
@@ -34,7 +36,7 @@ Progetto Basi Dati Marti
 - <s>simulazione checkout</s>
 - <s> gestione ordini e clienti da parte dell'admin </s>
 - <s>capacità di navigare il catalogo per marca, tipo, ricerca libera (uso di un plugin third party?)</s>
-- da richiesta gli admin dovrebbero poter gestire gli altri admin <em>(devo trovare un modo oltre alle autorita riconosciute dalla      spring security, che sono ROLE_USER E ROLE_ADMIN)</em>
+- <s>da richiesta gli admin dovrebbero poter gestire gli altri admin <em>(devo trovare un modo oltre alle autorita riconosciute dalla      spring security, che sono ROLE_USER E ROLE_ADMIN)</em></s>
 - <s>Gestione di prodotti in push (per cui spingere la vendita) con inserimento in una “vetrina in home page” o in un area promo
   <em>La vetrina la ho, bisogna mettere le immagini con i relativi link ai prodotti ( o ad una categoria di prodotti)</em></s>
 - <s>Possibilità di visualizzare lo stato dell’ordine e lo storico degli ordini effettuati</s>
@@ -52,7 +54,7 @@ Progetto Basi Dati Marti
                                           
  dove l'int rappresenta il cartId univoco per il cliente </s>
  - se modifico un prodotto già esistente come admin, la modifica dell'immagine non funziona sempre <s>(il perchè è un mistero)</s>
-   <em> A quanto pare non salva fino al restart dell'app, probabilmente perche sono all'interno del progetto. Bisognerebbe provare a salvarli in una cartella esterna temporanea, passandone il path al file xml.
+   <em> A quanto pare non salva fino al restart dell'app, probabilmente perche sono all'interno del progetto. Bisognerebbe provare a salvarli in una cartella esterna temporanea, passandone il path al file xml.<strong>IGNORATO</strong>
 Altra opzione e' capire come funziona l'inserimento delle immagini in un db, ma non avrei voglia di rimettere mano ai modelli</em>
  - <s>se come admin metto un prodotto "INACTIVE", lo posso comunque vedere lo stesso nella lista prodotti. Ora questo mi può andare bene per la visione dell'admin (anche se deve essere segnalato in qualche modo), ma l'utente non deve poterli vedere. Tantomeno ordinarli, perchè adesso se li vede li può anche ordinare. All'infinito. (lol) </s>
  - <s>modificare il checkout flow (un po' di ricerca necessaria) in modo tale che se il cliente non completa il checkout, lo stato dell'ordine risulta "nocheckout", o ancora meglio, quando clicco per andare al checkout non creo l'ordine direttamente come succede adesso, ma lo faccio a checkout completato</s>
