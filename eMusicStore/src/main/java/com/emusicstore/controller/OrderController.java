@@ -33,6 +33,9 @@ public class OrderController {
     @Autowired
     private TrackingService trackingService;
 
+    @Autowired
+    private MailService mailService;
+
     @RequestMapping("/order/{cartId}")
     public  String goToCheckout(@PathVariable("cartId") int cartId){
 
@@ -93,6 +96,10 @@ public class OrderController {
 
         }
         cartItemService.clearCart(customer.getCart());
+        System.out.println(">>>>>sto per inviare la mail");
+        String msg= customer.getCustomerName()+", thanks for placing your order! Order "+customerOrder.getCustomerOrderId().getOrderId()
+                +" will be shipped in two business days. Go to 'My orders' to track your order status once it's shipped.";
+        mailService.sendEmail(customer.getCustomerEmail(), "order@wemusicstore.com", "Your Order", msg);
         return "redirect:/";
     }
 }

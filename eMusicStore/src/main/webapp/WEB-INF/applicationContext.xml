@@ -43,6 +43,22 @@
         <property name="maxUploadSize" value="1024000" />
     </bean>
 
+    <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+        <property name="host" value="smtp.gmail.com" />
+        <property name="port" value="587" />
+        <property name="username" value="dummyforjavamail@gmail.com" />
+        <property name="password" value="java1mail2" />
+
+        <property name="javaMailProperties">
+            <props>
+                <prop key="mail.transport.protocol">smtp</prop>
+                <prop key="mail.smtp.auth">true</prop>
+                <prop key="mail.smtp.starttls.enable">true</prop>
+                <prop key="mail.debug">true</prop>
+            </props>
+        </property>
+    </bean>
+
     <security:http auto-config="true">
         <security:intercept-url pattern="/admin/**" access="ROLE_ADMIN" />
         <security:intercept-url pattern="/customer/**" access="ROLE_USER" />
@@ -58,11 +74,16 @@
 
     <security:authentication-manager>
         <security:authentication-provider>
+            <security:password-encoder ref="encoder"/>
             <security:jdbc-user-service data-source-ref="dataSource"
                                         authorities-by-username-query="SELECT username, authority From authorities WHERE username = ?"
                                         users-by-username-query="SELECT username, password, enabled FROM users WHERE username = ?" />
         </security:authentication-provider>
     </security:authentication-manager>
+
+    <bean id="encoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder">
+        <constructor-arg value="12"></constructor-arg>
+    </bean>
 
     <webflow-config:flow-executor id="flowExecutor" flow-registry="flowRegistry"/>
 

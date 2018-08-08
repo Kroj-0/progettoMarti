@@ -39,6 +39,7 @@
         <div class="container" >
             <div class="col-md-5">
                 <h3>Your Info</h3>
+                <div>${error}</div>
 
                 <label for="surname">New Password</label>
                 <input type="password" minlength="8" placeholder="min. 8 char." id="password" class="form-Control" onkeyup="check()"/>

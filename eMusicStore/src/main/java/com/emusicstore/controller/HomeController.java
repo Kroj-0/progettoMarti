@@ -24,7 +24,7 @@ public class HomeController {
         if(logout!=null){
             model.addAttribute("msg", "Logged out succesfully");
         }
-        User user=(User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+
         System.out.println(">>>>> user ");
         return "login";
     }
@@ -32,5 +32,10 @@ public class HomeController {
     @RequestMapping("/about")
     public String about(){
         return "about";
+    }
+
+    @RequestMapping("/faq")
+    public String faq(){
+        return "faq";
     }
 }

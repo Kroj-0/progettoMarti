@@ -135,4 +135,14 @@ public class CustomerDaoImpl implements CustomerDao {
         session.saveOrUpdate(customer);
         session.flush();
     }
+
+    public String getPwd(String username) {
+        Session session=sessionFactory.getCurrentSession();
+        Query query=session.createQuery("from Customer where username = ?");
+        query.setString(0, username);
+
+        String pwd=query.uniqueResult().toString();
+        session.flush();
+        return pwd;
+    }
 }

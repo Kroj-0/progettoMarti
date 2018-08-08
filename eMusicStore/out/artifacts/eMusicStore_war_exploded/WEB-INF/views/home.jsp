@@ -90,7 +90,7 @@
             <img class="img-circle" src="<c:url value="/resources/images/faq.png" />" alt="Generic placeholder image" width="140" height="140">
             <h2>FAQ</h2>
             <p>All the help you need.</p>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            <p><a class="btn btn-default" href="<c:url value="/faq"/> " role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
     </div><!-- /.row -->
 

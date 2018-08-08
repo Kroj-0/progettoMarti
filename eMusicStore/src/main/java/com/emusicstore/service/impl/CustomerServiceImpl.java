@@ -41,4 +41,8 @@ public class CustomerServiceImpl implements CustomerService {
     public void updateShAd(Customer customer) {
         customerDao.updateShAd(customer);
     }
+
+    public String getPwd(String username) {
+        return customerDao.getPwd(username);
+    }
 }

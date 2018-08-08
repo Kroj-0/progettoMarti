@@ -6,6 +6,7 @@ import com.emusicstore.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.bind.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,6 +14,8 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.util.HashMap;
 import java.util.List;
@@ -75,6 +78,7 @@ public class CustomerController {
         if(result.hasErrors()){
             return "editPhone&Email";
         }
+
         customerService.editCustomerDetails(user);
         return "redirect:/customer/myDetails/";
     }
@@ -86,13 +90,17 @@ public class CustomerController {
     }
 
     @RequestMapping(value="/myDetails/editPassword", method = RequestMethod.POST)
-    public String editPasswordPost(@Valid@ModelAttribute("user") Customer user, BindingResult result){
+    public String editPasswordPost(@Valid@ModelAttribute("user") Customer user, BindingResult result,Model model){
         if(result.hasErrors()){
             return "editPassword";
         }
+
+        System.out.println("Encoded pwd is: "+user.getPassword());
         customerService.editCustomerDetails(user);
         return "redirect:/customer/myDetails/";
+
     }
+
 
     @RequestMapping("/myOrders")
     public String getOrderDetails(Model model, @AuthenticationPrincipal User activeUser){

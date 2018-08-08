@@ -2,6 +2,7 @@ package com.emusicstore.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.validator.constraints.NotEmpty;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -96,7 +97,8 @@ public class Customer implements Serializable {
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        BCryptPasswordEncoder encoder =new BCryptPasswordEncoder(12);
+        this.password = encoder.encode(password);
     }
 
     public boolean isEnabled() {
