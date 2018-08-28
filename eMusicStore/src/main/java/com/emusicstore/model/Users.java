@@ -2,21 +2,26 @@ package com.emusicstore.model;
 
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name="users")
-public class Users{
+public class Users implements Serializable{
 
+    private static final long serialVersionUID = 4163809278805830670L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int userId;
-
+    @Column( updatable=false )
     private String username;
     private String password;
+    @Column( updatable=false )
     private boolean enabled;
+    @Column( updatable=false )
+    private String authority;
 
-
-    private int customerId;
+    @OneToOne(mappedBy = "users")
+    private Customer customer;
 
     public int getUserId() {
         return userId;
@@ -50,11 +55,20 @@ public class Users{
         this.enabled = enabled;
     }
 
-    public int getCustomerId() {
-        return customerId;
+    public Customer getCustomer() {
+        return customer;
     }
 
-    public void setCustomerId(int customerId) {
-        this.customerId = customerId;
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
     }
+
+    public String getAuthority() {
+        return authority;
+    }
+
+    public void setAuthority(String authority) {
+        this.authority = authority;
+    }
+
 }

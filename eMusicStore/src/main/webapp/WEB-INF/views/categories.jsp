@@ -112,7 +112,7 @@
                 <ul class="list-group">
                     <a href="<c:url value="/product/cat?category=accessory" />" >
                     <li class="list-group-item clearfix" style="width: 97.45%; height: 200px; padding: 0px">
-                        <img src="<c:url value="/resources/images/accessory_header.jpg"/> " style="width: 100%; height: 100%; opacity: 0.7"/>
+                        <img src="<c:url value="/resources/images/accessories_header.png"/> " style="width: 100%; height: 100%; opacity: 0.7"/>
                     </li>
                     </a>
                     <div class="col-md-4 col-md-offset-1" style="width: 300px">
@@ -172,7 +172,7 @@
                     <div class="col-md-4" style="width: 300px">
                         <li class="list-group-item clearfix" style="width: 300px; height: 200px; padding: 0px">
 
-                            <a href="<c:url value="/product/subcat?subcategory=instrument_strings" />" >
+                            <a href="<c:url value="/product/subcat?subcategory=corde" />" >
                                 <div class="row">
                                     <div class="container" style="width: 300px; height: 150px;padding: 0px">
                                         <img src="<c:url value="/resources/images/instr_strings_header.jpg"/> " style="width: 100%; height: 100%; opacity: 0.7"/>

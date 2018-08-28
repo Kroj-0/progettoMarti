@@ -76,7 +76,7 @@
         <security:authentication-provider>
             <security:password-encoder ref="encoder"/>
             <security:jdbc-user-service data-source-ref="dataSource"
-                                        authorities-by-username-query="SELECT username, authority From authorities WHERE username = ?"
+                                        authorities-by-username-query="SELECT username, authority From users WHERE username = ?"
                                         users-by-username-query="SELECT username, password, enabled FROM users WHERE username = ?" />
         </security:authentication-provider>
     </security:authentication-manager>

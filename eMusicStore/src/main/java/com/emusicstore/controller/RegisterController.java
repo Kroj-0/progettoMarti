@@ -6,6 +6,7 @@ import com.emusicstore.model.Customer;
 import com.emusicstore.model.ShippingAddress;
 import com.emusicstore.service.CustomerService;
 import com.emusicstore.service.MailService;
+import com.emusicstore.service.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -26,6 +27,9 @@ public class RegisterController {
 
     @Autowired
     private MailService mailService;
+
+    @Autowired
+    private UsersService usersService;
 
     @RequestMapping("/register")
     public String registerCustomer(Model model){
@@ -62,7 +66,7 @@ public class RegisterController {
             }
         }
         System.out.println(">>>>>I recieved password:"+customer.getPassword()+"/////");
-        customer.setEnabled(true);
+//        customer.setEnabled(true);
         customerService.addCustomer(customer);
         System.out.println(">>>>>sto per inviare la mail");
         String msg= "Welcome to WestEnd MusicStore, "+customer.getCustomerName()+"! You now have full access to our website, to purchase products" +

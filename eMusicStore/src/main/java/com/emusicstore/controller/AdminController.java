@@ -1,10 +1,7 @@
 package com.emusicstore.controller;
 
 import com.emusicstore.model.*;
-import com.emusicstore.service.CustomerOrderService;
-import com.emusicstore.service.CustomerService;
-import com.emusicstore.service.ProductService;
-import com.emusicstore.service.TrackingService;
+import com.emusicstore.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
@@ -38,6 +35,8 @@ public class AdminController {
     private CustomerOrderService customerOrderService;
     @Autowired
     private TrackingService trackingService;
+    @Autowired
+    private UsersService usersService;
 
     @InitBinder
     public void initBinder(WebDataBinder webDataBinder) {
@@ -85,9 +84,12 @@ public class AdminController {
             return "viewCustomer";
         }
 
-        System.out.println(">>>>>>>>>>>>>>>>prima della modifica");
-        customerService.editEnable(customer);
-        System.out.println(">>>>>>>>>>>>>>>>dopo la modifica" + customer.isEnabled());
+//        System.out.println(">>>>>>>>>>>>>>>>prima della modifica");
+//        customerService.editEnable(customer);
+//
+        Users user=usersService.getUserByUsername(customer.getUsername());
+        usersService.setEnable(user);
+        System.out.println(">>>>>>>>>>>>>>>>dopo la modifica" + user.isEnabled());
 
         return "redirect:/admin/users/viewCustomer/" + customer.getCustomerId();
     }

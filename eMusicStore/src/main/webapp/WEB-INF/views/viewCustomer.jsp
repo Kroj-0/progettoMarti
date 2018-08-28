@@ -43,12 +43,13 @@
                         <form:hidden path="shippingAddress.shippingAddressId" value="${customer.shippingAddress.shippingAddressId}" />
                         <form:hidden path="billingAddress.billingAddressId" value="${customer.billingAddress.billingAddressId}" />
                         <form:hidden path="cart.cartId" value="${customer.cart.cartId}" />
+                        <form:hidden path="users.userId" value="${customer.users.userId}" />
                     </div>
                     <div class="form-group">
                         <label for="status">Status</label>
-                        <label class="checkbox-inline"><form:radiobutton path="enabled" id="status"
+                        <label class="checkbox-inline"><form:radiobutton path="users.enabled" id="status"
                                                                      value="1" />Enabled</label>
-                        <label class="checkbox-inline"><form:radiobutton path="enabled" id="status"
+                        <label class="checkbox-inline"><form:radiobutton path="users.enabled" id="status"
                                                                      value="0" />Disabled</label>
                     </div>
                     <input type="submit" value="Confirm status changes?" class="btn btn-default">

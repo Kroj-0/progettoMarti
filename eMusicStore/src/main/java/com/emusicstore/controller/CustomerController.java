@@ -90,12 +90,13 @@ public class CustomerController {
     }
 
     @RequestMapping(value="/myDetails/editPassword", method = RequestMethod.POST)
-    public String editPasswordPost(@Valid@ModelAttribute("user") Customer user, BindingResult result,Model model){
+    public String editPasswordPost(@Valid@ModelAttribute("user") Customer user, BindingResult result){
         if(result.hasErrors()){
             return "editPassword";
         }
 
-        System.out.println("Encoded pwd is: "+user.getPassword());
+        System.out.println("Pwd in customer is: "+user.getPassword());
+
         customerService.editCustomerDetails(user);
         return "redirect:/customer/myDetails/";
 

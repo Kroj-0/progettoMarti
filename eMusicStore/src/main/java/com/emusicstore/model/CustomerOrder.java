@@ -49,7 +49,7 @@ public class CustomerOrder implements Serializable{
     @JoinColumn(name="shippingAddressId")
     private ShippingAddress shippingAddress;
 
-    @ManyToOne
+    @OneToOne
     @JoinColumns({
             @JoinColumn(name = "status", nullable=false),
             @JoinColumn(name = "trackingId", nullable=false)

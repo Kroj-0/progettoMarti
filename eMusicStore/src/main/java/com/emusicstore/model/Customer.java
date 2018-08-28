@@ -29,7 +29,9 @@ public class Customer implements Serializable {
     @NotEmpty
     private String password;
 
-    private boolean enabled;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name="userId")
+    private Users users;
 
     @OneToOne
     @JoinColumn(name="billingAddressId")
@@ -101,12 +103,12 @@ public class Customer implements Serializable {
         this.password = encoder.encode(password);
     }
 
-    public boolean isEnabled() {
-        return enabled;
+    public Users getUsers() {
+        return users;
     }
 
-    public void setEnabled(boolean enabled) {
-        this.enabled = enabled;
+    public void setUsers(Users users) {
+        this.users = users;
     }
 
     public BillingAddress getBillingAddress() {

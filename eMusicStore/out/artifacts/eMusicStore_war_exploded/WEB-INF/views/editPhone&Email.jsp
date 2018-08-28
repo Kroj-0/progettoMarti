@@ -32,7 +32,7 @@
                     <form:hidden path="customerId" value="${customer.customerId}" />
                     <div class="form-group">
                         <form:hidden path="username" id="username"  value="${customer.username}" />
-                        <form:hidden path="password" value="${customer.password}" /><br>
+                        <form:hidden path="users.password" value="${customer.users.password}" /><br>
 
                         <form:hidden path="customerName" id="name"  value="${customer.customerName}"/><br>
 
@@ -44,7 +44,8 @@
                         <form:hidden path="shippingAddress.shippingAddressId" value="${customer.shippingAddress.shippingAddressId}" />
                         <form:hidden path="billingAddress.billingAddressId" value="${customer.billingAddress.billingAddressId}" />
                         <form:hidden path="cart.cartId" value="${customer.cart.cartId}" />
-                        <form:hidden path="enabled" value="${customer.enabled}" />
+                        <form:hidden path="users.userId" value="${customer.users.userId}" />
+                        <form:hidden path="users.enabled" value="${customer.users.enabled}" />
                     </div>
                     <input type="submit" value="Confirm status changes?" class="btn btn-default">
                 </form:form>

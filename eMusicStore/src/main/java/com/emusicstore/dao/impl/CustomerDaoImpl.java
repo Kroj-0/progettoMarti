@@ -2,7 +2,6 @@ package com.emusicstore.dao.impl;
 
 
 import com.emusicstore.dao.CustomerDao;
-import com.emusicstore.model.Authorities;
 import com.emusicstore.model.Cart;
 import com.emusicstore.model.Customer;
 import com.emusicstore.model.Users;
@@ -27,32 +26,28 @@ public class CustomerDaoImpl implements CustomerDao {
 
         Session session=sessionFactory.getCurrentSession();
 
-        customer.getBillingAddress().setCustomer(customer);
-        customer.getShippingAddress().setCustomer(customer);
-
-        session.saveOrUpdate(customer);
-        session.saveOrUpdate(customer.getBillingAddress());
-        session.saveOrUpdate(customer.getShippingAddress());
-
         Users newUser = new Users();
 
         newUser.setUsername(customer.getUsername());
         newUser.setPassword(customer.getPassword());
         newUser.setEnabled(true);
-        newUser.setCustomerId(customer.getCustomerId());
-
-        Authorities newAuthority=new Authorities();
-
-        newAuthority.setUsername(customer.getUsername());
-        newAuthority.setAuthority("ROLE_USER");
-        newAuthority.setPassword(customer.getPassword());
-
+        newUser.setAuthority("ROLE_USER");
 
         session.saveOrUpdate(newUser);
-        session.saveOrUpdate(newAuthority);
 
-        //forse rivedibile. Conviene assegnare al cliente un cart alla registrazione o quando effettivamente vuole
-        //mettere qualcosa nel carrello??
+        customer.getBillingAddress().setCustomer(customer);
+        customer.getShippingAddress().setCustomer(customer);
+        customer.setUsers(newUser);
+        session.saveOrUpdate(customer);
+        session.saveOrUpdate(customer.getBillingAddress());
+        session.saveOrUpdate(customer.getShippingAddress());
+
+//        Authorities newAuthority=new Authorities();
+//        newAuthority.setUsername(customer.getUsername());
+//        newAuthority.setAuthority("ROLE_USER");
+//        newAuthority.setPassword(customer.getPassword());
+//        session.saveOrUpdate(newAuthority);
+
         Cart newCart = new Cart();
         newCart.setCustomer(customer);
         customer.setCart(newCart);
@@ -86,7 +81,7 @@ public class CustomerDaoImpl implements CustomerDao {
         return (Customer) query.uniqueResult();
 
         // attraverso '?' indico una variabile, con setString associo alla prima occorrenza di ? lo username passato come parametro
-        //Siccome username è chiave primaria, il risultato sara univoco: posso castare la query a oggetto customer con uniqueResult()
+        //Siccome username è unico, il risultato sara univoco: posso castare la query a oggetto customer con uniqueResult()
     }
 
     public void editEnable(Customer customer) {
@@ -97,12 +92,12 @@ public class CustomerDaoImpl implements CustomerDao {
 
 
         System.out.println(">>>>>>>>>>>>>>>>>>prendo l'user corrispondente al customer attraverso il customerId");
-        Query query=session.createQuery("from Users where customerId = ?");
-        query.setInteger(0, customer.getCustomerId());
+        Query query=session.createQuery("from Users where userId = ?");
+        query.setInteger(0, customer.getUsers().getUserId());
         Users users= (Users)query.uniqueResult();
-        System.out.println(">>>>>>>>>>>>>> " + users.getUserId() + users.getUsername() + users.isEnabled() + users.getCustomerId());
-        users.setEnabled(customer.isEnabled());
-        System.out.println(">>>>>>>>>>>>>> " + users.getUserId() + users.getUsername() + users.isEnabled() + users.getCustomerId());
+//        System.out.println(">>>>>>>>>>>>>> " +  users.getUsername() + users.isEnabled() + users.getCustomerId());
+        users.setEnabled(!users.isEnabled());
+//        System.out.println(">>>>>>>>>>>>>> " +  users.getUsername() + users.isEnabled() + users.getCustomerId());
         System.out.println(">>>>>>>>>>>>>>>>>>aggiorno la tabella users");
         session.saveOrUpdate(users);
         session.flush();
@@ -111,23 +106,27 @@ public class CustomerDaoImpl implements CustomerDao {
 
     public void editCustomerDetails(Customer customer) {
         Session session=sessionFactory.getCurrentSession();
-        session.update(customer);
-        session.flush();
-        Query query=session.createQuery("from Users where customerId = ?");
-        query.setInteger(0, customer.getCustomerId());
-        Users users= (Users)query.uniqueResult();
-        System.out.println(">>>>>>>>>>>>>> " + users.getUserId() + users.getUsername() + users.isEnabled() + users.getCustomerId());
-        users.setPassword(customer.getPassword());
-        System.out.println(">>>>>>>>>>>>>> " + users.getUserId() + users.getUsername() + users.isEnabled() + users.getCustomerId());
+
+//        Query query=session.createQuery(" from Users where userId = ?");
+//        query.setInteger(0, customer.getUsers().getUserId());
+//        Users users= (Users)query.uniqueResult();
+//        System.out.println(">>>>>>>>> userId, enabled, pwd, username and authority : "+ users.getUserId() + " "
+//                + users.isEnabled() + " " + users.getPassword() + " "+ users.getUsername() + " " + users.getAuthority());
+//        System.out.println(">>>>>>>>>>>>>> " + users.getUserId() + users.getUsername() + users.isEnabled() + users.getCustomer().getCustomerId());
+//        users.setPassword(customer.getPassword());
+//        System.out.println(">>>>>>>>> userId, enabled, newpwd, username and authority : "+ users.getUserId() + " "
+//                + users.isEnabled() + " " + users.getPassword() + " "+ users.getUsername() + " " + users.getAuthority());
+//        System.out.println(">>>>>>>>>>>>>> " + users.getUserId() + users.getUsername() + users.isEnabled() + users.getCustomer().getCustomerId());
+        customer.getUsers().setPassword(customer.getPassword());
         System.out.println(">>>>>>>>>>>>>>>>>>aggiorno la tabella users");
-        session.saveOrUpdate(users);
+        session.merge(customer.getUsers());
+//        session.flush();
+//        session.clear();
+        System.out.println(">>>>>>>>>>>>>>>>>>aggiorno la tabella customer");
+        session.merge(customer);
         session.flush();
-        Query query1=session.createQuery("from Authorities where username = ?");
-        query1.setString(0, customer.getUsername());
-        Authorities authorities= (Authorities) query1.uniqueResult();
-        authorities.setPassword(customer.getPassword());
-        session.saveOrUpdate(authorities);
-        session.flush();
+        System.out.println(">>>>>>>>>>>>>>>>>>ho finito, non devo piu tornare qui");
+
     }
 
     public void updateShAd(Customer customer){
@@ -138,7 +137,7 @@ public class CustomerDaoImpl implements CustomerDao {
 
     public String getPwd(String username) {
         Session session=sessionFactory.getCurrentSession();
-        Query query=session.createQuery("from Customer where username = ?");
+        Query query=session.createQuery("from Users where username = ?");
         query.setString(0, username);
 
         String pwd=query.uniqueResult().toString();

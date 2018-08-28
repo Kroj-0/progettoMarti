@@ -60,7 +60,7 @@
             <label for="category">Category</label>
             <label class="checkbox-inline"><form:radiobutton path="productCategory" id="category1" value="instrument" name="myRadios"
                                                              onchange="change(event)" />Instrument</label>
-            <label class="checkbox-inline"><form:radiobutton path="productCategory" id="category2" value="record" name="myRadios"
+            <label class="checkbox-inline"><form:radiobutton path="productCategory" id="category2" value="records" name="myRadios"
                                                              onchange="change(event)"/>Record</label>
             <label class="checkbox-inline"><form:radiobutton path="productCategory" id="category3" value="accessory" name="myRadios"
                                                              onchange="change(event)" />Accessory</label>
@@ -84,7 +84,7 @@
                 <form:option value="headphones">headphones</form:option>
                 <form:option value="amplifiers">amplifiers</form:option>
                 <form:option value="picks&capos">picks&capos</form:option>
-                <form:option value="instrument_strings">instrument_strings</form:option>
+                <form:option value="corde">instrument_strings</form:option>
             </form:select>
         </div>
 

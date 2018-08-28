@@ -56,7 +56,7 @@
                         <td>${customer.customerSurname}</td>
                         <td>${customer.customerEmail}</td>
                         <td>${customer.customerPhone}</td>
-                        <td>${customer.enabled}</td>
+                        <td>${customer.users.enabled}</td>
                         <td><a href="<spring:url value="/admin/users/viewCustomer/${customer.customerId}" />"
                         ><span class="glyphicon glyphicon-info-sign"></span></a></td>
                     </tr>

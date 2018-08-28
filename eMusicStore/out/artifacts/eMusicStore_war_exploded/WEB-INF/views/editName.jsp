@@ -37,7 +37,8 @@
                         <form:hidden path="shippingAddress.shippingAddressId" value="${customer.shippingAddress.shippingAddressId}" />
                         <form:hidden path="billingAddress.billingAddressId" value="${customer.billingAddress.billingAddressId}" />
                         <form:hidden path="cart.cartId" value="${customer.cart.cartId}" />
-                        <form:hidden path="enabled" value="${customer.enabled}" />
+                        <form:hidden path="users.userId" value="${customer.users.userId}" />
+                        <form:hidden path="users.enabled" value="${customer.users.enabled}" />
                     </div>
                     <input type="submit" value="Confirm status changes?" class="btn btn-default">
                 </form:form>

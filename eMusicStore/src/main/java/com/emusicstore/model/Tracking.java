@@ -16,8 +16,8 @@ public class Tracking implements Serializable {
     @EmbeddedId
     private TrackingId trackingId;
 
-    @OneToMany(mappedBy = "tracking",cascade = CascadeType.ALL)
-    private Set<CustomerOrder> customerOrder;
+    @OneToOne(mappedBy = "tracking",cascade = CascadeType.ALL)
+    private CustomerOrder customerOrder;
 
     @Column(name = "updatedOn", columnDefinition="DATETIME")
     @Temporal(TemporalType.DATE)
@@ -39,12 +39,12 @@ public class Tracking implements Serializable {
         this.trackingId = trackingId;
     }
 
-    public Set<CustomerOrder> getCustomerOrder() {
-        return customerOrder;
+    public void setCustomerOrder(CustomerOrder customerOrder) {
+        this.customerOrder = customerOrder;
     }
 
-    public void setCustomerOrder(Set<CustomerOrder> customerOrder) {
-        this.customerOrder = customerOrder;
+    public CustomerOrder getCustomerOrder() {
+        return customerOrder;
     }
 
     public Date getDate() {

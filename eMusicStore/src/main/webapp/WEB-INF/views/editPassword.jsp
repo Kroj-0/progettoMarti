@@ -41,12 +41,13 @@
                 <h3>Your Info</h3>
                 <div>${error}</div>
 
-                <label for="surname">New Password</label>
-                <input type="password" minlength="8" placeholder="min. 8 char." id="password" class="form-Control" onkeyup="check()"/>
+
                 <form:form action="${pageContext.request.contextPath}/customer/myDetails/editPassword" method="post"
                            commandName="customer">
                     <form:hidden path="customerId" value="${customer.customerId}" />
                     <div class="form-group">
+                        <label for="surname">New Password</label><form:errors path="password" cssStyle="color: #ff0000;" /><br>
+                        <form:password minlength="8" placeholder="min. 8 char." path="users.password" id="password" class="form-Control" onkeyup="check()"/>
                         <form:hidden path="username" id="username"  value="${customer.username}" />
 
                         <label for="name">Confirm Password</label><form:errors path="password" cssStyle="color: #ff0000;" /><br>
@@ -62,7 +63,8 @@
                         <form:hidden path="shippingAddress.shippingAddressId" value="${customer.shippingAddress.shippingAddressId}" />
                         <form:hidden path="billingAddress.billingAddressId" value="${customer.billingAddress.billingAddressId}" />
                         <form:hidden path="cart.cartId" value="${customer.cart.cartId}" />
-                        <form:hidden path="enabled" value="${customer.enabled}" />
+                        <form:hidden path="users.userId" value="${customer.users.userId}" />
+                        <form:hidden path="users.enabled" value="${customer.users.enabled}" />
                     </div>
                     <input type="submit" value="Confirm status changes?" class="btn btn-default">
                 </form:form>
