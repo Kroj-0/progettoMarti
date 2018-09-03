@@ -69,7 +69,7 @@
                             <table class="table table-hover">
                                 <thead>
                                 <tr>
-                                    <th>Product</th>
+                                    <th style="width: 50%">Product</th>
                                     <th>#</th>
                                     <th class="text-center">Price</th>
                                     <th class="text-center">Total</th>

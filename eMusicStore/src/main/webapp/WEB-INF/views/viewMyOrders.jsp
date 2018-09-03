@@ -86,7 +86,7 @@
                                         </div>
 
                                             <div class="row" >
-                                                <a href="<c:url value="/customer"/>" class="btn btn-default " style="margin:0 auto;width: 200px" >Contact support</a>
+                                                <a href="#" class="btn btn-default " style="margin:0 auto;width: 200px" >Contact support</a>
                                             </div>
                                             <div class="row" ng-controller="cartCtrl">
                                                 <a class="btn btn-warning "

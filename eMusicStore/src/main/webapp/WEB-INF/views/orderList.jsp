@@ -38,14 +38,14 @@
             <table class="table table-striped table-hover">
                 <thead>
                 <tr class="bg-success">
-                    <th>OrderId</th>
-                    <th>Product Id</th>
+                    <th style="width: 10%">OrderId</th>
+                    <th style="width: 10%">ProductId</th>
                     <th>Quantity</th>
                     <th>Total</th>
-                    <th>Date</th>
-                    <th style="width: 300px">Shipping Address</th>
-                    <th>Status</th>
-                    <th>Details</th>
+                    <th style="width: 10%">Date</th>
+                    <th style="width: 30%">Shipping Address</th>
+                    <th style="width: 15%">Status</th>
+                    <th style="width: 8%">Info</th>
                 </tr>
                 </thead>
                 <c:forEach items="${orders}" var="customerOrder">

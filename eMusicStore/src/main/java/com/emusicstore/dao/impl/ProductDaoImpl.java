@@ -53,11 +53,13 @@ public class ProductDaoImpl implements ProductDao {
     public List<Product> getProductsFromSearch(String name, String order) {
         Session session=sessionFactory.getCurrentSession();
         if(order==null){
-            Query query=session.createQuery("from Product where productName like ? or productDescription like ? or productSubcategory like ? or productCategory like ?");
+            Query query=session.createQuery("from Product where productName like ? or productDescription like ? " +
+                    "or productSubcategory like ? or productCategory like ? or productManufacturer like ?");
             query.setString(0, "%"+name+"%");
             query.setString(1, "%"+name+"%");
             query.setString(2, "%"+name+"%");
             query.setString(3, "%"+name+"%");
+            query.setString(4, "%"+name+"%");
 
             List<Product> products=query.list();
             session.flush();
@@ -66,13 +68,13 @@ public class ProductDaoImpl implements ProductDao {
         else{
             String [] values=order.split("_");
 
-            Query query=session.createQuery("from Product where productName like ? or " +
-                    "productDescription like ? or productSubcategory like ? or productCategory like ? order by "+ values[0]+" "+ values[1]);
+            Query query=session.createQuery("from Product where productName like ? or productDescription like ? " +
+                    "or productSubcategory like ? or productCategory like ? or productManufacturer like ? order by "+ values[0]+" "+ values[1]);
             query.setString(0, "%"+name+"%");
             query.setString(1, "%"+name+"%");
             query.setString(2, "%"+name+"%");
             query.setString(3, "%"+name+"%");
-
+            query.setString(4, "%"+name+"%");
 
             List<Product> products=query.list();
             session.flush();

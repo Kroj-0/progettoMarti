@@ -15,7 +15,8 @@
         //select table class inside document, to apply dataTables functions
         var table= $('.table').DataTable({
             "searching": false,
-            "info": false
+            "info": false,
+            "lengthMenu": [ 2,3,4,5]
         });
 
     });
@@ -108,7 +109,7 @@
                         </c:if>
                         <c:if test="${!state.equals(denied)}">
                             <form:select path="tracking.trackingId.status" id="st" >
-                                <form:option value="Attuale: ${order.status}"/>
+                                <form:option value="Attuale: ${order.tracking.trackingId.status}"/>
                                 <form:options items="${status}"/>
                             </form:select>
                         </c:if>
@@ -149,6 +150,7 @@
                     <label for="st">Update order status         </label>
                     <c:set var="state" value="${order.tracking.trackingId.status}"/>
                     <c:set var="denied" value="cancelled"/>
+
                     <c:if test="${state.equals(denied)}">
                         <form:select path="tracking.trackingId.status" id="st" >
                             <form:option value="Attuale: ${order.tracking.trackingId.status}"/>
@@ -174,16 +176,16 @@
         </div>
         </c:if>
         </div>
-        <div class="container">
+        <div class="container" style="margin-top: 20px">
             <div class="col-md-30">
                 <a href="<c:url value="/admin/orders"/>" class="btn btn-default pull-right" >Back to OrderList</a>
             </div>
         </div>
-
-
-
+    </div>
+    <div class="container" style="margin-top: 30px">
+        <%@include file="/WEB-INF/views/template/footer.jsp" %>
     </div>
 </div>
 
 
-<%@include file="/WEB-INF/views/template/footer.jsp" %>
+

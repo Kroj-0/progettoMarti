@@ -13,10 +13,11 @@
     </ol>
     <div class="carousel-inner" role="listbox">
         <div class="item active">
+            <a href="<c:url value="/product/searchProduct?search=fender"/>">
             <img class="first-slide home-image"
                  src="<c:url value="/resources/images/vet1.jpg" />"
                  alt="First slide">
-
+            </a>
             <div class="container">
                 <div class="carousel-caption">
                     <h1>Welcome to WestEnd Music Store</h1>
@@ -28,10 +29,11 @@
             </div>
         </div>
         <div class="item">
+            <a href="<c:url value="/product/searchProduct?search=korg"/>">
             <img class="second-slide home-image"
                  src="<c:url value="/resources/images/vet2.jpg" />"
                  alt="Second slide">
-
+            </a>
             <div class="container">
                 <div class="carousel-caption">
 

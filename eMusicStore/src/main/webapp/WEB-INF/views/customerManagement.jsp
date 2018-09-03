@@ -44,7 +44,7 @@
                     <th style="width: 20%">Email</th>
                     <th>Phone number</th>
                     <th>Enabled</th>
-                    <th></th>
+                    <th style="width: 5%"></th>
 
 
                 </tr>

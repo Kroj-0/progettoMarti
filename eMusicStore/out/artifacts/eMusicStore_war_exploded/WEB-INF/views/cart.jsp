@@ -29,7 +29,7 @@
 
             <table class="table table-hover">
                 <tr>
-                    <th>Product</th>
+                    <th style="width: 40%">Product</th>
                     <th>Unit Price</th>
                     <th>Quantity</th>
                     <th></th>
