@@ -121,6 +121,9 @@ public class CustomerController {
         System.out.println(">>>>>presa la lista degli stati tracking dal trackId");
         System.out.println(">>>>>prrimo elemento data: "+tracking.get(0).getDate());
         Map<String, String> status = new HashMap<String, String>();
+        for(int i=0;i<tracking.size();i++){
+            System.out.println(">>>>>>>>>>>>>>>>Elemento " + i+ "stato: " + tracking.get(i).getTrackingId().getStatus()+ " tracking#: " + tracking.get(i).getTrackingId().getTrackingId());
+        }
         status.put("confirmed", "confirmed");
         status.put("prep4shipping", "prepaired");
         status.put("shipped", "shipped");

@@ -44,6 +44,7 @@
                         <form:hidden path="billingAddress.billingAddressId" value="${customer.billingAddress.billingAddressId}" />
                         <form:hidden path="cart.cartId" value="${customer.cart.cartId}" />
                         <form:hidden path="users.userId" value="${customer.users.userId}" />
+
                     </div>
                     <div class="form-group">
                         <label for="status">Status</label>

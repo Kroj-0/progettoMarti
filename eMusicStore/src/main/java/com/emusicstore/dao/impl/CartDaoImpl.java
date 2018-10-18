@@ -31,7 +31,6 @@ public class CartDaoImpl implements CartDao {
     }
     public void update(Cart cart){
 
-        int cartId=cart.getCartId();
         double total= customerOrderService.getOrderTotal(cart.getCartId());
         cart.setTotal(total);
 

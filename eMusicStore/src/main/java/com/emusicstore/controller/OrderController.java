@@ -9,11 +9,12 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
 @Controller
-public class OrderController {
+public class OrderController implements Serializable{
 
     @Autowired
     private CartService cartService;

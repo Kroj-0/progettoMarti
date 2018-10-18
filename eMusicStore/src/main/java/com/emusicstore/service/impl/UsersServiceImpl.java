@@ -5,10 +5,10 @@ import com.emusicstore.model.Users;
 import com.emusicstore.service.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-@Repository
-@Transactional
+@Service
 public class UsersServiceImpl implements UsersService {
 
     @Autowired
@@ -19,6 +19,9 @@ public class UsersServiceImpl implements UsersService {
     }
 
     public void setEnable(Users user) {
+
+        Users control= usersDao.getUserByUsername(user.getUsername());
+        System.out.println(">>>>>>>>SERVICE>>>>>>>>prima della modifica controllo il db "+ control.isEnabled());
         usersDao.setEnable(user);
     }
 }

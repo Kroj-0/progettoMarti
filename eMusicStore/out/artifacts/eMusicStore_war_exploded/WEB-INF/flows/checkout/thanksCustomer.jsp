@@ -15,14 +15,15 @@
             <div class="jumbotron">
                 <div class="container">
                     <h1>Thanks for your order!</h1>
-                    <P>Your order will be shipped in two business days.</P>
+                    <P>Click below to confirm you order, and you'll recieve confirmation email in aprox. 2 minutes.
+                        Your order will be shipped in two business days. Follow your order progress in "My orders" section of your account</P>
                 </div>
             </div>
         </section>
 
         <section class="container" >
             <p>
-                <a href="<spring:url value="/checkout-ended"/>" class="btn btn-default">OK</a>
+                <a href="<spring:url value="/checkout-ended"/>" class="btn btn-default">OK, Confirm</a>
             </p>
         </section>
 

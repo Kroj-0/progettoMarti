@@ -17,10 +17,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Controller
 @SessionAttributes("refreshCO")
@@ -79,18 +76,26 @@ public class AdminController {
 
     @RequestMapping(value = "/users/editCustomer", method = RequestMethod.POST)
     public String editCustomerPost(@Valid @ModelAttribute("customer") Customer customer, BindingResult result) {
-        System.out.println(">>>>>>>>>>>>>>>>sono entrato nel metodo post");
-        if (result.hasErrors()) {
-            return "viewCustomer";
-        }
+//        System.out.println(">>>>>>>>>>>>>>>>sono entrato nel metodo post");
+//        if (result.hasErrors()) {
+//            return "viewCustomer";
+//        }
 
-//        System.out.println(">>>>>>>>>>>>>>>>prima della modifica");
-//        customerService.editEnable(customer);
-//
-        Users user=usersService.getUserByUsername(customer.getUsername());
+        Users user = usersService.getUserByUsername(customer.getUsername());
+        System.out.println(">>>>>>>>CONTROLLER>>>>>>>>user prima della modifica "+user.isEnabled());
+        user.setEnabled(customer.getUsers().isEnabled());
+
+        System.out.println(">>>>>>>>CONTROLLER>>>>>>>>user dopo della modifica "+user.isEnabled());
+        System.out.println(">>>>>>>>CONTROLLER>>>>>>>>username user "+user.getUsername());
+        System.out.println(">>>>>>>>CONTROLLER>>>>>>>>pwd user "+user.getPassword());
+        System.out.println(">>>>>>>>CONTROLLER>>>>>>>>userid user "+user.getUserId());
+        System.out.println(">>>>>>>>CONTROLLER>>>>>>>>auth user "+user.getAuthority());
+        System.out.println(">>>>>>>>CONTROLLER>>>>>>>>customer user "+user.getCustomer());
+
         usersService.setEnable(user);
-        System.out.println(">>>>>>>>>>>>>>>>dopo la modifica" + user.isEnabled());
 
+//        Users control = usersService.getUserByUsername(customer.getUsername());
+//        System.out.println(">>>>>>>>CONTROLLER>>>>>>>>dopo la modifica verifico il database " + control.isEnabled());
         return "redirect:/admin/users/viewCustomer/" + customer.getCustomerId();
     }
 
@@ -115,10 +120,10 @@ public class AdminController {
 
     @RequestMapping("/orders/viewOrder/orderDetails")
     public String prettyUrlViewOrderDetail(Model model, @ModelAttribute("refreshCO") CustomerOrder customerOrder, BindingResult result) {
-//        if(result.hasErrors()){
-//            model.addAttribute("error", "Unexpected error, please try to access data again");
-//            return "redirect:/admin/orders";
-//        }
+        if(result.hasErrors()){
+            model.addAttribute("error", "Unexpected error, please try to access data again");
+            return "redirect:/admin/orders";
+        }
 
         List<CustomerOrder> linkedOrders = customerOrderService.getLinkedOrders(customerOrder);
         System.out.println(">>>>>>>>>>>>>> elementi della lista " + linkedOrders.size());
@@ -149,6 +154,32 @@ public class AdminController {
         Tracking tracking=new Tracking(trId, new Date());
         customerOrder.setTracking(tracking);
 
+        List<String> status = new ArrayList<String>();
+        status.add(0,"confirmed");
+        status.add(1,"prep4shipping");
+        status.add(2,"shipped");
+        status.add(3,"transit");
+        status.add(4,"received");
+
+        String actual=customerOrder.getTracking().getTrackingId().getStatus();
+        System.out.println(">>>>>>>>>>>>>>>>stato che ho cambiato: "+actual);
+        if(customerOrder.getTracking().getTrackingId().getStatus()!= status.get(0))
+        {
+            List <Tracking> list=trackingService.getTrackingById(trId.getTrackingId());
+            for(int i=0;i<list.size();i++){
+                System.out.println(">>>>>>>>>>>>>>>>primo stato della lista per quel tracking: "+list.get(i).getTrackingId().getStatus());
+                if(customerOrder.getTracking().getTrackingId().getStatus()!= list.get(i).getTrackingId().getStatus()){
+                    for(int j=1;j<status.size();j++){
+                        if(customerOrder.getTracking().getTrackingId().getStatus()!= status.get(j)){
+                            TrackingId trId2=new TrackingId(list.get(i).getTrackingId().getTrackingId(), status.get(j).toString());
+                            Tracking track2=new Tracking(trId2, new Date());
+                            System.out.println(">>>>>>>>>>>>>>>>facendo piu di uno step inserisco questo stato: "+trId2.getStatus());
+                            trackingService.addTracking(track2);
+                        }
+                    }
+                }
+            }
+        }
         trackingService.addTracking(tracking);
         customerOrderService.update(customerOrder);
         String redirect = "/admin/orders/viewOrder/" + customerOrder.getCustomerOrderId().getOrderId()

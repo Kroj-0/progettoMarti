@@ -20,45 +20,54 @@
             </c:if>
         </div>
 
-        <div class="container">
+        <div class="container" style="width: 900px">
             <ul class="list-group">
-                <li class="list-group-item clearfix">
-
                 <a href="<c:url value="/customer/myOrders" />">
-                <div class="row">
-                    <div class="container">
-                    <h3>
-                       Your Orders
-                    </h3>
-                    <p>Here you can view your order history!</p>
-                    </div>
-                </div>
-                </a>
-                </li>
                 <li class="list-group-item clearfix">
+                    <div class="col-md-4" style="margin-top: 60px">
+                        <div class="container">
+                        <h3>
+                            Your Orders
+                        </h3>
+                        <p>Here you can view your order history!</p>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <img src="<c:url value="/resources/images/orders.jpg"/> " style="width: 100%; height: 40%; opacity: 0.7"/>
+                    </div>
+                </li>
+                </a>
                 <a href="<c:url value="/customer/myDetails" />">
-                <div class="row">
-                <div class="container">
-                    <h3>
-                        Your Details
-                    </h3>
-                    <p>Here you can view your account details!</p>
-                </div>
-                </div>
-                </a>
-                </li>
                 <li class="list-group-item clearfix">
-                <a href="<c:url value="/customer/myAddresses" />">
-                <div class="row">
-                    <div class="container">
-                    <h3>
-                        Your Addresses
-                    </h3>
-                    <p>Here you can view your billing and shipping addresses, and set favorites!</p>
+                    <div class="col-md-4" style="margin-top: 60px">
+                        <div class="container">
+                            <h3>
+                                Your Details
+                            </h3>
+                            <p>Here you can view your account details!</p>
+                        </div>
                     </div>
-                </div>
-                </a>
+                    <div class="col-md-8">
+                        <img src="<c:url value="/resources/images/account.png"/> " style="width: 100%; height: 40%; opacity: 0.7"/>
+                    </div>
                 </li>
+                </a>
+                <a href="<c:url value="/customer/myAddresses" />">
+                <li class="list-group-item clearfix">
+                    <div class="col-md-4" style="margin-top: 40px">
+                        <div class="container">
+                        <h3>
+                            Your Addresses
+                        </h3>
+                            <p>Here you can view your billing and</p>
+                            <p>shipping addresses, and set favorites!</p>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <img src="<c:url value="/resources/images/address.jpg"/> " style="width: 100%; height: 40%; opacity: 0.7"/>
+                    </div>
+                </li>
+                </a>
             </ul>
             </div>
 
