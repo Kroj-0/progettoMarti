@@ -18,7 +18,7 @@ public class CartItem implements Serializable {
 
     @ManyToOne
     @JoinColumn(name="cartId")
-    @JsonIgnore
+    @JsonIgnore//esclude cart dal processo di serializzazione
     private Cart cart;
 
     @ManyToOne

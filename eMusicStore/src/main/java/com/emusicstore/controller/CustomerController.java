@@ -122,9 +122,9 @@ public class CustomerController {
         CustomerOrder customerOrder=customerOrderService.getFromTracking(trackingId);
 
         model.addAttribute("order", customerOrder);
-        SimpleMailMessage message = new SimpleMailMessage();
-        message.setSubject("TICKET -- Customer Id: " + customerOrder.getCustomer().getCustomerId() + " Customer Order Id: " + customerOrder.getCustomerOrderId().getOrderId() +
-                " Customer Product Id: " + customerOrder.getCustomerOrderId().getProductId());
+        String subject ="TICKET -- Customer Id: " + customerOrder.getCustomer().getCustomerId() + " Customer Order Id: " + customerOrder.getCustomerOrderId().getOrderId() +
+                " Customer Product Id: " + customerOrder.getCustomerOrderId().getProductId();
+        SimpleMailMessage message=mailService.prepEmail("","",subject,"");
         model.addAttribute("mail", message);
 
         return "supportPage";

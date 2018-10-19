@@ -24,7 +24,7 @@ public class Cart implements Serializable{
 
     @OneToOne
     @JoinColumn(name="customerId")
-    @JsonIgnore
+    @JsonIgnore//esclude customer dal processo di serializzazione
     private Customer customer;
 
     private double total;

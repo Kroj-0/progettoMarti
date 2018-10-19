@@ -22,5 +22,14 @@ public class MailServiceImpl implements MailService {
         message.setText(msgBody);
         mailSender.send(message);
     }
+
+    public SimpleMailMessage prepEmail(String to, String from, String sub, String msg) {
+        SimpleMailMessage message = new SimpleMailMessage();
+        message.setFrom(from);
+        message.setTo(to);
+        message.setSubject(sub);
+        message.setText(msg);
+        return message;
+    }
 }
 
