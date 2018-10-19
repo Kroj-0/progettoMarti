@@ -4,6 +4,7 @@ package com.emusicstore.controller;
 import com.emusicstore.model.*;
 import com.emusicstore.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.SimpleMailMessage;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -37,6 +38,9 @@ public class CustomerController {
 
     @Autowired
     private TrackingService trackingService;
+
+    @Autowired
+    private MailService mailService;
 
     @RequestMapping
     public String customerPage(){
@@ -110,6 +114,29 @@ public class CustomerController {
         model.addAttribute("orders", customerOrders);
 
         return "viewMyOrders";
+    }
+
+    @RequestMapping("/myOrders/support/{trackingId}")
+    public String contactSupport(Model model, @PathVariable("trackingId") String trackingId){
+
+        CustomerOrder customerOrder=customerOrderService.getFromTracking(trackingId);
+
+        model.addAttribute("order", customerOrder);
+        SimpleMailMessage message = new SimpleMailMessage();
+        message.setSubject("TICKET -- Customer Id: " + customerOrder.getCustomer().getCustomerId() + " Customer Order Id: " + customerOrder.getCustomerOrderId().getOrderId() +
+                " Customer Product Id: " + customerOrder.getCustomerOrderId().getProductId());
+        model.addAttribute("mail", message);
+
+        return "supportPage";
+    }
+    @RequestMapping(value="myOrders/support", method = RequestMethod.POST)
+    public String contactSupportPost(@Valid @ModelAttribute("mail")SimpleMailMessage message, BindingResult result, @ModelAttribute("order") CustomerOrder customerOrder){
+        if(result.hasErrors()){
+            return "supportPage";
+        }
+
+        mailService.sendEmail("servizio.clienti.dummy@gmail.com", message.getFrom(), message.getSubject(), message.getText());
+        return "redirect:/customer/myOrders";
     }
 
     @RequestMapping("/myOrders/tracking/{trackingId}")

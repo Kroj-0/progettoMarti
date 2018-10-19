@@ -10,4 +10,5 @@ public interface TrackingDao {
     Tracking getTracking(String trackingId, String status);
     String setTracking(int saId);
     List<Tracking> getTrackingById(String trackingId);
+    void updateStatus(Tracking tracking);
 }

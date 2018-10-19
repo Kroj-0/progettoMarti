@@ -60,4 +60,14 @@ public class TrackingDaoImpl implements TrackingDao{
         System.out.println(">>>>> track = "+track);
         return track;
     }
+
+//@Deprecated
+    public void updateStatus(Tracking tracking){
+//        Session session=sessionFactory.getCurrentSession();
+//        Query query=session.createQuery("update Tracking set status=? where trackingId=?");
+//        query.setString(0, tracking.getTrackingId().getStatus());
+//        query.setString(1, tracking.getTrackingId().getTrackingId());
+//        query.executeUpdate();
+//        session.flush();
+    }
 }

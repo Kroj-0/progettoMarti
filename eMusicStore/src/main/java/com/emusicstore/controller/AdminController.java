@@ -82,20 +82,9 @@ public class AdminController {
 //        }
 
         Users user = usersService.getUserByUsername(customer.getUsername());
-        System.out.println(">>>>>>>>CONTROLLER>>>>>>>>user prima della modifica "+user.isEnabled());
+//        System.out.println(">>>>>>>>CONTROLLER>>>>>>>>user prima della modifica "+user.isEnabled());
         user.setEnabled(customer.getUsers().isEnabled());
-
-        System.out.println(">>>>>>>>CONTROLLER>>>>>>>>user dopo della modifica "+user.isEnabled());
-        System.out.println(">>>>>>>>CONTROLLER>>>>>>>>username user "+user.getUsername());
-        System.out.println(">>>>>>>>CONTROLLER>>>>>>>>pwd user "+user.getPassword());
-        System.out.println(">>>>>>>>CONTROLLER>>>>>>>>userid user "+user.getUserId());
-        System.out.println(">>>>>>>>CONTROLLER>>>>>>>>auth user "+user.getAuthority());
-        System.out.println(">>>>>>>>CONTROLLER>>>>>>>>customer user "+user.getCustomer());
-
         usersService.setEnable(user);
-
-//        Users control = usersService.getUserByUsername(customer.getUsername());
-//        System.out.println(">>>>>>>>CONTROLLER>>>>>>>>dopo la modifica verifico il database " + control.isEnabled());
         return "redirect:/admin/users/viewCustomer/" + customer.getCustomerId();
     }
 
@@ -163,19 +152,21 @@ public class AdminController {
 
         String actual=customerOrder.getTracking().getTrackingId().getStatus();
         System.out.println(">>>>>>>>>>>>>>>>stato che ho cambiato: "+actual);
-        if(customerOrder.getTracking().getTrackingId().getStatus()!= status.get(0))
+        if(!customerOrder.getTracking().getTrackingId().getStatus().equals(status.get(0)))
         {
             List <Tracking> list=trackingService.getTrackingById(trId.getTrackingId());
             for(int i=0;i<list.size();i++){
                 System.out.println(">>>>>>>>>>>>>>>>primo stato della lista per quel tracking: "+list.get(i).getTrackingId().getStatus());
-                if(customerOrder.getTracking().getTrackingId().getStatus()!= list.get(i).getTrackingId().getStatus()){
-                    for(int j=1;j<status.size();j++){
-                        if(customerOrder.getTracking().getTrackingId().getStatus()!= status.get(j)){
-                            TrackingId trId2=new TrackingId(list.get(i).getTrackingId().getTrackingId(), status.get(j).toString());
-                            Tracking track2=new Tracking(trId2, new Date());
-                            System.out.println(">>>>>>>>>>>>>>>>facendo piu di uno step inserisco questo stato: "+trId2.getStatus());
-                            trackingService.addTracking(track2);
-                        }
+                if(!actual.equals(list.get(i).getTrackingId().getStatus())){
+                    int j=1;
+                    while(!actual.equals(status.get(j)) && j<status.size()){
+                        String fromList=status.get(j);
+                        System.out.println(">>>>>>>>>>>>>>>>stato che ho nella mia lista degli stati: "+fromList);
+                        TrackingId trId2=new TrackingId(list.get(i).getTrackingId().getTrackingId(), status.get(j));
+                        Tracking track2=new Tracking(trId2, new Date());
+                        System.out.println(">>>>>>>>>>>>>>>>facendo piu di uno step inserisco questo stato: "+trId2.getStatus());
+                        trackingService.addTracking(track2);
+                        j++;
                     }
                 }
             }

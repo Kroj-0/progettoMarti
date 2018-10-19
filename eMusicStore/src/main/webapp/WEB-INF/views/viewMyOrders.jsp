@@ -82,11 +82,13 @@
                                             </div>
                                         </c:when>
                                         <c:otherwise><div class="row">
-                                            <a href="<c:url value="/customer/myOrders/tracking/${customerOrder.tracking.trackingId.trackingId}"/>" class="btn btn-default  " style="margin-top:23px;width: 200px"  >Track your shipment</a>
+                                            <a href="<c:url value="/customer/myOrders/tracking/${customerOrder.tracking.trackingId.trackingId}"/>"
+                                               class="btn btn-default  " style="margin-top:23px;width: 200px"  >Track your shipment</a>
                                         </div>
 
                                             <div class="row" >
-                                                <a href="#" class="btn btn-default " style="margin:0 auto;width: 200px" >Contact support</a>
+                                                <a href="<c:url value="/customer/myOrders/support/${customerOrder.tracking.trackingId.trackingId}"/>"
+                                                   class="btn btn-default " style="margin:0 auto;width: 200px" >Contact support</a>
                                             </div>
                                             <div class="row" ng-controller="cartCtrl">
                                                 <a class="btn btn-warning "

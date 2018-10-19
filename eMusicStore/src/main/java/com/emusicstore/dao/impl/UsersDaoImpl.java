@@ -35,13 +35,5 @@ public class UsersDaoImpl implements UsersDao {
         query.setInteger(1, user.getUserId());
         query.executeUpdate();
         session.flush();
-        //        user.setEnabled(user.isEnabled());
-//        session.saveOrUpdate(user);
-//        session.flush();
-//        System.out.println(">>>>>>>>DAO>>>>>>>>dopo della modifica "+ user.isEnabled());
-//
-        Users control=getUserByUsername(user.getUsername());
-        System.out.println(">>>>>>>>DAO>>>>>>>>dopo della modifica controllo il db "+ control.isEnabled());
-        session.flush();
     }
 }

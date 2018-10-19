@@ -144,4 +144,14 @@ public class CustomerDaoImpl implements CustomerDao {
         session.flush();
         return pwd;
     }
+
+    public Customer getCustomerByEmail(String email) {
+        Session session=sessionFactory.getCurrentSession();
+        Query query=session.createQuery("from Customer where customerEmail=?");
+        query.setString(0, email);
+
+        Customer customer=(Customer)query.uniqueResult();
+        session.flush();
+        return customer;
+    }
 }

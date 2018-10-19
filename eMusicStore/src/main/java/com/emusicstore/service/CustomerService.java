@@ -16,4 +16,5 @@ public interface CustomerService {
     void editCustomerDetails(Customer customer);
     void updateShAd(Customer customer);
     String getPwd(String username);
+    Customer getCustomerByEmail(String email);
 }

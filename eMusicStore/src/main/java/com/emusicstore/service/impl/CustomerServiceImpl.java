@@ -45,4 +45,8 @@ public class CustomerServiceImpl implements CustomerService {
     public String getPwd(String username) {
         return customerDao.getPwd(username);
     }
+
+    public Customer getCustomerByEmail(String email) {
+        return customerDao.getCustomerByEmail(email);
+    }
 }

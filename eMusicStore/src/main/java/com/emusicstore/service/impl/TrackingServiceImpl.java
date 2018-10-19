@@ -30,4 +30,8 @@ public class TrackingServiceImpl implements TrackingService {
         List<Tracking> tracking=trackingDao.getTrackingById(trackingId);
         return tracking;
     }
+
+    public void updateStatus(Tracking tracking) {
+        trackingDao.updateStatus(tracking);
+    }
 }
