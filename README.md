@@ -23,6 +23,7 @@ Progetto Basi Dati Marti<strong>COMPLETED!!!</strong>
 - added faq page <strong>funzionante</strong>
 - added password encoding <strong>funzionante</strong>
 - added email sending for registration and order placement <strong>funzionante</strong>
+- added email sending for customer support <strong>funzionante</strong>
 - DAO, controller e Servizi implementati totalmente per i punti sopra svolti <strong>funzionante</strong>
 
 # DA RIVEDERE?
